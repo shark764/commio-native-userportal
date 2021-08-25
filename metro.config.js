@@ -8,16 +8,22 @@ const escape = require('escape-string-regexp');
 // remove the @ (see: https://blog.expo.io/expo-sdk-41-12cc5232f2ef)
 const { getDefaultConfig } = require('expo/metro-config');
 
-const pak = require('../sds-react-native-components/package.json');
-// const pak = {
-//   peerDependencies: {
-//     react: '*',
-//     'react-native': '*',
-//   },
-// };
+// const pak = require('../rn-library-test-aug17/package.json');
+// const pak = require('../sds-react-native-components/package.json');
+const pak = {
+  peerDependencies: {
+    '@2600hz/sds-core': '^1.0.5',
+    '@2600hz/sds-telicon': '^1.0.3',
+    react: '*',
+    'react-native': '*',
+    'react-native-svg': '*',
+    'styled-components': '*',
+  },
+};
 // sds-react-native-components
-const dirName = pak.name.split('/')[1];
-const root = path.resolve(__dirname, '..', dirName);
+// const root = path.resolve(__dirname, '..', 'rn-library-test-aug17');
+// const dirName = pak.name.split('/')[1];
+// const root = path.resolve(__dirname, '..', dirName);
 
 const modules = Object.keys({
   ...pak.peerDependencies,
@@ -29,7 +35,7 @@ module.exports = (async () => {
   } = await getDefaultConfig(__dirname);
   return {
     projectRoot: __dirname,
-    watchFolders: [root],
+    // watchFolders: [root],
     transformer: {
       getTransformOptions: async () => ({
         transform: {
@@ -46,7 +52,7 @@ module.exports = (async () => {
 
       // We need to make sure that only one version is loaded for peerDependencies
       // So we blacklist them at the root, and alias them to the versions in example's node_modules
-      blacklistRE: blacklist(modules.map((m) => new RegExp(`^${escape(path.join(root, 'node_modules', m))}\\/.*$`))),
+      // blacklistRE: blacklist(modules.map((m) => new RegExp(`^${escape(path.join(root, 'node_modules', m))}\\/.*$`))),
 
       extraNodeModules: modules.reduce((acc, name) => {
         acc[name] = path.join(__dirname, 'node_modules', name);

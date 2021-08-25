@@ -1,6 +1,8 @@
 const path = require('path');
+// const pak = require('../rn-library-test-aug17/package.json');
 const pak = require('../sds-react-native-components/package.json');
 // const pak = {
+//   name: 'rn-library-test-aug17',
 //   name: '@2600hz/sds-react-native-components',
 //   source: 'src/index',
 // };
@@ -28,7 +30,8 @@ module.exports = function (api) {
             tests: ['./tests/'],
 
             // For development, we want to alias the library to the source
-            [pak.name]: path.join(__dirname, '..', dirName, pak.source),
+            // [pak.name]: path.join(__dirname, '..', pak.name, pak.source),
+            // [pak.name]: path.join(__dirname, '..', dirName, pak.source),
           },
         },
       ],
