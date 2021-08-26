@@ -3,7 +3,7 @@ const createExpoWebpackConfigAsync = require('@expo/webpack-config');
 const metroConfig = require('./metro.config');
 
 // const root = path.resolve(__dirname, '..', 'rn-library-test-aug17');
-const root = path.resolve(__dirname, '..', 'sds-react-native-components');
+// const root = path.resolve(__dirname, '..', 'sds-react-native-components');
 const node_modules = path.join(__dirname, 'node_modules');
 
 module.exports = async function (env, argv) {

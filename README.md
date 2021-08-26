@@ -109,6 +109,16 @@ feat: Adding new badge component
 fix: Touchable component not being exported correctly
 ```
 
+Follow [Semantic Versioning 2.0.0](https://semver.org/) to update project version.
+
+[Release-It](https://github.com/release-it/release-it) will take care of versioning, you just have to give the correct type to commit:
+
+- **fix** - to indicate a bug fix (PATCH) ex . v0.0.1
+- **feat** - to indicate a new feature (MINOR) ex. v0.1.0
+- **chore** - for updates that do not require a version bump (.gitignore, comments, etc.)
+- **docs** - for updates to the documentation
+- **BREAKING CHANGE** - regardless of type, indicates a Major release (MAJOR) ex. v1.0.0
+
 ## License
 
 MIT

@@ -24,6 +24,7 @@
     "prettify": "yarn run format && yarn run lint:fix",
     "full-check": "yarn run prettify && yarn run typescript",
     "release": "release-it",
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}.",
     "test": "jest --watchAll",
     "example": "yarn --cwd example",
     "pods": "cd example && pod-install --quiet",

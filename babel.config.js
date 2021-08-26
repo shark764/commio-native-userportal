@@ -1,6 +1,6 @@
 const path = require('path');
 // const pak = require('../rn-library-test-aug17/package.json');
-const pak = require('../sds-react-native-components/package.json');
+// const pak = require('../sds-react-native-components/package.json');
 // const pak = {
 //   name: 'rn-library-test-aug17',
 //   name: '@2600hz/sds-react-native-components',
@@ -8,7 +8,7 @@ const pak = require('../sds-react-native-components/package.json');
 // };
 
 // sds-react-native-components
-const dirName = pak.name.split('/')[1];
+// const dirName = pak.name.split('/')[1];
 
 module.exports = function (api) {
   api.cache(true);
@@ -23,10 +23,16 @@ module.exports = function (api) {
           extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
           alias: {
             '@': './src',
-            '@containers': './src/containers',
+            '@assets': './src/assets',
             '@components': './src/components',
+            '@config': './src/config',
+            '@containers': './src/containers',
+            '@helpers': './src/helpers',
             '@modules': './src/modules',
+            '@providers': './src/providers',
+            '@shared': './src/shared',
             '@styles': './src/styles',
+            '@utilities': './src/utilities',
             tests: ['./tests/'],
 
             // For development, we want to alias the library to the source
