@@ -46,7 +46,7 @@
     "target": "ESNext"
   },
   "exclude": [
-    "__tests__ /**/*-test.ts",
+    "__tests__/**/*-test.ts",
     "node_modules",
     "build",
     "coverage",

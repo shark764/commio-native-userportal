@@ -1,4 +1,6 @@
-export const darkTheme = {
+import type { ThemeModeProps } from '@dfhernandez/sds-react-native-components';
+
+export const darkTheme: ThemeModeProps = {
   mode: 'dark',
   PRIMARY_BACKGROUND_COLOR: '#740001',
   PRIMARY_TEXT_COLOR: '#ae0001',
@@ -6,7 +8,7 @@ export const darkTheme = {
   PRIMARY_BUTTON_COLOR: '#d3a625',
   SECONDARY_BUTTON_COLOR: '#000000',
 };
-export const lightTheme = {
+export const lightTheme: ThemeModeProps = {
   mode: 'light',
   PRIMARY_BACKGROUND_COLOR: '#fffefc',
   PRIMARY_TEXT_COLOR: '#880000',

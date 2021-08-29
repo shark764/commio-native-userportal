@@ -107,7 +107,9 @@ Make sure your messages look like the following examples
 ```
 feat: Adding new badge component
 fix: Touchable component not being exported correctly
+fix!: Drop support for Typescript
 ```
+_Note that the last one will generate a Major commit. It has the same result as adding a breaking change footer_
 
 Follow [Semantic Versioning 2.0.0](https://semver.org/) to update project version.
 
@@ -118,6 +120,8 @@ Follow [Semantic Versioning 2.0.0](https://semver.org/) to update project versio
 - **chore** - for updates that do not require a version bump (.gitignore, comments, etc.)
 - **docs** - for updates to the documentation
 - **BREAKING CHANGE** - regardless of type, indicates a Major release (MAJOR) ex. v1.0.0
+
+Visit [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for more examples.
 
 ## License
 

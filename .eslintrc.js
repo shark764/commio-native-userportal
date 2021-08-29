@@ -111,11 +111,8 @@ module.exports = {
       'error',
       {
         pathGroups: [
-          {
-            pattern: '@/**',
-            group: 'parent',
-            position: 'before',
-          },
+          { pattern: '@/**', group: 'parent', position: 'before' },
+          { pattern: '@sds-*/**', group: 'parent', position: 'before' },
         ],
       },
     ],
