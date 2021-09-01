@@ -1,13 +1,17 @@
 import * as React from 'react';
-import { DefaultTheme, ThemeProvider } from 'styled-components/native';
-import { darkTheme, lightTheme } from '../styles/theme';
+import { ThemeProvider } from 'styled-components/native';
+import {
+  DefaultThemeProps,
+  darkTheme,
+  lightTheme,
+} from '@dfhernandez/native-theme';
 
 interface Props {
   mode: string;
   children: React.ReactNode;
 }
 
-const themeMap: { [key: string]: DefaultTheme; } = {
+const themeMap: { [key: string]: DefaultThemeProps; } = {
   light: lightTheme,
   dark: darkTheme,
 };
@@ -16,7 +20,7 @@ function AppThemeProvider ({
   mode = 'dark',
   children,
 }: Props): React.ReactElement {
-  const theme: DefaultTheme = themeMap[mode];
+  const theme: DefaultThemeProps = themeMap[mode];
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }
 

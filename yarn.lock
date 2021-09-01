@@ -1455,22 +1455,26 @@
   dependencies:
     chalk "^4.0.0"
 
-"@dfhernandez/js-utilities@^0.3.6":
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/js-utilities/-/js-utilities-0.3.6.tgz#5f62ebdee3613f3ea625b49e4746d081fa7ffb43"
-  integrity sha512-VkKl2WGjlner1kDEOVv+qINCbV5KraxuT9QsS2m0Ia93Siyg0cqs7JNX9qfN/qeS7czTKAxbucfQRjWeAg5PUA==
+"@dfhernandez/js-utilities@^0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@dfhernandez/js-utilities/-/js-utilities-0.4.2.tgz#defb0427f7bdf6dcbe7a8170e0e7d5e59f5b6c7a"
+  integrity sha512-iUTmffo+tyh86jBSq6xVEsaMY8aSvXxBpdCZjbhPf8WAs8aSIu7+oOJNtlPxW8n6e/OjLd0XHvXNOpeO/rw+Gw==
 
-"@dfhernandez/js-utilities@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/js-utilities/-/js-utilities-0.4.1.tgz#dad87015d43c65d66f664b7fa8f000b43fee3234"
-  integrity sha512-E14+gRPOHHHn1uH6uTYLCKTwAHN11TDDsnEQOBxZN4puNJhxBEZoTGFIrUBToI7r9W0Q9Q49cvbuBI90eiRNrQ==
-
-"@dfhernandez/sds-react-native-components@^1.5.0":
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/sds-react-native-components/-/sds-react-native-components-1.5.0.tgz#eacb9fccf29751b5b78c6f9257f17018c47b33ef"
-  integrity sha512-7Vyslx9zb0cYJtdKxQpkp5fFk2dPv6KmQ1SSzl37JLiGVKjO7HNrNk/S+x3eUJTvyjENR+K8RIrybuB4oTRWAw==
+"@dfhernandez/native-theme@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@dfhernandez/native-theme/-/native-theme-0.1.1.tgz#c333536951a6677e0d2053c9ab0654e73e5437fc"
+  integrity sha512-vF4Se/g6WQkWcO8rlidCBfLdh+TyYaEvpB0FLmr08jhAU2IcLGg9CQbD4nJtclb78ba6i7IobokYY9nfGfZoxw==
   dependencies:
-    "@dfhernandez/js-utilities" "^0.3.6"
+    "@dfhernandez/js-utilities" "^0.4.2"
+    styled-components "^5.3.0"
+
+"@dfhernandez/sds-react-native-components@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@dfhernandez/sds-react-native-components/-/sds-react-native-components-1.6.0.tgz#9bf3bebd8e7c7a4ca9b93acd0fd10ea584bb00b7"
+  integrity sha512-afxmu/IHgyOwfjBLwnDdNRNvnD/mIywxdEGUzwya2ykOY2hZI04DwsKxv/e0BAsEGCQ+frQP4nbgtRKIrJEvgg==
+  dependencies:
+    "@dfhernandez/js-utilities" "^0.4.2"
+    "@dfhernandez/native-theme" "^0.1.1"
     "@expo/vector-icons" "^12.0.0"
     expo "~42.0.1"
     expo-asset "~8.3.3"

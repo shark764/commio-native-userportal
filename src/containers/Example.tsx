@@ -3,18 +3,24 @@ import {
   Button,
   TextInfo,
   Telicon,
-  ThemeProps,
 } from '@dfhernandez/sds-react-native-components';
 import { capitalize } from '@dfhernandez/js-utilities';
+import type { ThemeProps } from '@dfhernandez/native-theme';
 import styled, { useTheme } from 'styled-components/native';
 
 const Container = styled.SafeAreaView<ThemeProps>`
   flex: 1;
   background-color: ${(props: ThemeProps) =>
-    props.theme.PRIMARY_BACKGROUND_COLOR};
+    props.theme.colors.background.main};
   justify-content: center;
   align-items: center;
-  padding: 80px;
+  padding: 20px;
+  padding-top: 80px;
+`;
+const IconContainer = styled.View`
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 20px;
 `;
 
 export function Example ({
@@ -26,6 +32,13 @@ export function Example ({
 
   return (
     <Container>
+      {/* Example of Text */}
+      <TextInfo
+        color={theme.colors.font.main}
+        size="xlarge"
+        content={`You are using ${capitalize(theme.mode)} mode`}
+      />
+
       {/* Example of Button */}
       <Button
         onPress={() =>
@@ -34,27 +47,37 @@ export function Example ({
           )
         }
         title="Toggle theme mode"
-        // color="#e22d39"
-        color={theme.colors.button.main}
+        color={theme.colors.button.secondary}
         size="xsmall"
       />
 
-      {/* Example of Text */}
-      <TextInfo
-        // color="#e22d39"
-        color={theme.colors.font.main}
-        size="xlarge"
-        content={`You are using ${capitalize(theme.mode)} mode`}
-      />
-
       {/* Example of Telicon */}
-      <Telicon
-        name="star"
-        size="small"
-        // color="#e22d39"
-        color={theme.colors.icon.main}
-        fillSecondary="#630007"
-      />
+      <IconContainer>
+        <Telicon
+          name="star"
+          size="large"
+          fill={theme.colors.icon.secondary}
+          fillSecondary="#630007"
+        />
+        <Telicon
+          name="star"
+          size="medium"
+          fill={theme.colors.icon.secondary}
+          fillSecondary="#630007"
+        />
+        <Telicon
+          name="star"
+          size="small"
+          fill={theme.colors.icon.secondary}
+          fillSecondary="#630007"
+        />
+        <Telicon
+          name="star"
+          size="xsmall"
+          fill={theme.colors.icon.secondary}
+          fillSecondary="#630007"
+        />
+      </IconContainer>
     </Container>
   );
 }

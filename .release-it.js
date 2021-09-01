@@ -1,6 +1,6 @@
 const { releaseItBaseConfig } = require('@dfhernandez/js-utilities');
 
-delete releaseItBaseConfig.npm;
+releaseItBaseConfig.npm.publish = false;
 delete releaseItBaseConfig.hooks['after:bump'];
 
 module.exports = releaseItBaseConfig;
