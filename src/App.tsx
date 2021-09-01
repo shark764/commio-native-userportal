@@ -11,7 +11,7 @@ export function App () {
     <AppThemeProvider mode={themeMode}>
       <SafeAreaView>
         <ScrollView>
-          <Example themeMode={themeMode} setThemeMode={setThemeMode} />
+          <Example setThemeMode={setThemeMode} />
         </ScrollView>
         {/* eslint-disable-next-line react/style-prop-object */}
         <StatusBar style="dark" />

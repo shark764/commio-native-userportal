@@ -31,7 +31,8 @@
     "bootstrap": "yarn example && yarn && yarn pods"
   },
   "dependencies": {
-    "@dfhernandez/sds-react-native-components": "^1.3.3",
+    "@dfhernandez/js-utilities": "^0.4.1",
+    "@dfhernandez/sds-react-native-components": "^1.5.0",
     "@expo/vector-icons": "^12.0.0",
     "expo": "~42.0.1",
     "expo-asset": "~8.3.3",

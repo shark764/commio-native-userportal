@@ -3,9 +3,9 @@ import {
   Button,
   TextInfo,
   Telicon,
-  // ThemeModeProps,
   ThemeProps,
 } from '@dfhernandez/sds-react-native-components';
+import { capitalize } from '@dfhernandez/js-utilities';
 import styled, { useTheme } from 'styled-components/native';
 
 const Container = styled.SafeAreaView<ThemeProps>`
@@ -18,15 +18,11 @@ const Container = styled.SafeAreaView<ThemeProps>`
 `;
 
 export function Example ({
-  themeMode,
   setThemeMode,
 }: {
-  themeMode: string;
   setThemeMode: (lastTheme: any) => void;
 }) {
   const theme = useTheme();
-
-  console.log('theme', theme);
 
   return (
     <Container>
@@ -38,23 +34,25 @@ export function Example ({
           )
         }
         title="Toggle theme mode"
-        color="#e22d39"
+        // color="#e22d39"
+        color={theme.colors.button.main}
         size="xsmall"
       />
 
       {/* Example of Text */}
       <TextInfo
-        // color={theme.PRIMARY_TEXT_COLOR}
-        color="#e22d39"
+        // color="#e22d39"
+        color={theme.colors.font.main}
         size="xlarge"
-        content={`You are using ${themeMode} mode`}
+        content={`You are using ${capitalize(theme.mode)} mode`}
       />
 
       {/* Example of Telicon */}
       <Telicon
         name="star"
         size="small"
-        fill="#e22d39"
+        // color="#e22d39"
+        color={theme.colors.icon.main}
         fillSecondary="#630007"
       />
     </Container>

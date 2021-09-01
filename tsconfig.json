@@ -1,28 +1,8 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
     "baseUrl": "./",
-    "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "forceConsistentCasingInFileNames": true,
-    "importHelpers": true,
-    "importsNotUsedAsValues": "error",
-    "isolatedModules": true,
     "jsx": "react-native",
     "lib": ["es2017", "ESNext"],
-    "module": "CommonJS",
-    "moduleResolution": "node",
-    "noFallthroughCasesInSwitch": true,
-    "noEmit": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitUseStrict": false,
-    "noStrictGenericChecks": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "paths": {
       "@/*": ["src/*"],
       "@assets/*": ["src/assets/*"],
@@ -36,19 +16,15 @@
       "@styles/*": ["src/styles/*"],
       "@utilities/*": ["src/utilities/*"],
       "tests": ["tests/*"]
-    },
-    "preserveConstEnums": true,
-    "removeComments": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "sourceMap": true,
-    "strict": true,
-    "target": "ESNext"
+    }
   },
   "exclude": [
     "__tests__/**/*-test.ts",
+    "tests",
+    "dist",
     "node_modules",
     "build",
+    "lib",
     "coverage",
     ".eslintrc.js",
     ".svgrrc.js",
@@ -59,7 +35,7 @@
     "metro.config.js",
     "webpack.config.js"
   ],
-  "extends": "expo/tsconfig.base",
+  "extends": "@dfhernandez/js-utilities/tsconfig.base",
   "filesGlob": [
     "typings/index.d.ts",
     "src/**/*.ts",
@@ -67,5 +43,12 @@
     "node_modules/typescript/lib/lib.es6.d.ts"
   ],
   "include": ["**/*.js", "**/*.ts", "./*", "./**/*", "./src"],
-  "types": ["react", "react-dom", "react-native", "react-test-renderer", "jest"]
+  "types": [
+    "react",
+    "react-dom",
+    "react-native",
+    "react-test-renderer",
+    "jest",
+    "styled-components-react-native"
+  ]
 }
