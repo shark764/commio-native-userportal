@@ -41,6 +41,20 @@ export function Example ({
 
       {/* Example of Button */}
       <Button
+        onPress={() => setThemeMode('dark')}
+        title="Active dark mode"
+        color="#000"
+        size="xsmall"
+      />
+
+      <Button
+        onPress={() => setThemeMode('light')}
+        title="Active light mode"
+        color="#fff"
+        size="xsmall"
+      />
+
+      <Button
         onPress={() =>
           setThemeMode((lastTheme: string) =>
             lastTheme === 'dark' ? 'light' : 'dark'
@@ -78,6 +92,13 @@ export function Example ({
           fillSecondary="#630007"
         />
       </IconContainer>
+
+      <Telicon
+        name="available-balance"
+        size="xlarge"
+        fill={theme.colors.icon.main}
+        fillSecondary="#630007"
+      />
     </Container>
   );
 }

@@ -4,6 +4,7 @@ declare module '*.svg' {
 
   const content: React.FC<
   SvgProps & {
+    fillMain?: string;
     fillSecondary?: string;
   }
   >;
