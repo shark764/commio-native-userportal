@@ -1460,14 +1460,6 @@
   resolved "https://registry.yarnpkg.com/@dfhernandez/js-utilities/-/js-utilities-0.4.2.tgz#defb0427f7bdf6dcbe7a8170e0e7d5e59f5b6c7a"
   integrity sha512-iUTmffo+tyh86jBSq6xVEsaMY8aSvXxBpdCZjbhPf8WAs8aSIu7+oOJNtlPxW8n6e/OjLd0XHvXNOpeO/rw+Gw==
 
-"@dfhernandez/native-theme@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/native-theme/-/native-theme-0.1.1.tgz#c333536951a6677e0d2053c9ab0654e73e5437fc"
-  integrity sha512-vF4Se/g6WQkWcO8rlidCBfLdh+TyYaEvpB0FLmr08jhAU2IcLGg9CQbD4nJtclb78ba6i7IobokYY9nfGfZoxw==
-  dependencies:
-    "@dfhernandez/js-utilities" "^0.4.2"
-    styled-components "^5.3.0"
-
 "@dfhernandez/native-theme@^0.1.2":
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/@dfhernandez/native-theme/-/native-theme-0.1.2.tgz#3035853c9af42f4fbdca88959553bdaa6531a6d5"
@@ -1476,13 +1468,13 @@
     "@dfhernandez/js-utilities" "^0.4.2"
     styled-components "^5.3.0"
 
-"@dfhernandez/sds-react-native-components@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/sds-react-native-components/-/sds-react-native-components-1.6.0.tgz#9bf3bebd8e7c7a4ca9b93acd0fd10ea584bb00b7"
-  integrity sha512-afxmu/IHgyOwfjBLwnDdNRNvnD/mIywxdEGUzwya2ykOY2hZI04DwsKxv/e0BAsEGCQ+frQP4nbgtRKIrJEvgg==
+"@dfhernandez/sds-react-native-components@^1.7.1":
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@dfhernandez/sds-react-native-components/-/sds-react-native-components-1.7.1.tgz#5f12cd5662b6883e200762dcd354022548b07666"
+  integrity sha512-UbyHBj5zdSmm6GzlbTgdBIgjhjyAZGps26gusjm9elcirBAw/HOymhGT/uikAlf70e9fTT30Xv+3a9e11VAiOg==
   dependencies:
     "@dfhernandez/js-utilities" "^0.4.2"
-    "@dfhernandez/native-theme" "^0.1.1"
+    "@dfhernandez/native-theme" "^0.1.2"
     "@expo/vector-icons" "^12.0.0"
     expo "~42.0.1"
     expo-asset "~8.3.3"

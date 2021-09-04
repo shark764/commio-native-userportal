@@ -1,12 +1,7 @@
 declare module '*.svg' {
-  import React from 'react';
-  import { SvgProps } from 'react-native-svg';
+  import { SvgXmlFileType } from '@dfhernandez/sds-react-native-components';
 
-  const content: React.FC<
-  SvgProps & {
-    fillMain?: string;
-    fillSecondary?: string;
-  }
-  >;
+  const content: SvgXmlFileType;
+
   export default content;
 }
