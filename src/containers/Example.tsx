@@ -154,6 +154,10 @@ export function Example ({
         color="#000"
         size="xsmall"
       />
+      <Button
+        title="Testing button"
+        onPress={() => console.log('I\'m a button')}
+      />
 
       <Button
         onPress={() => setThemeMode('light')}

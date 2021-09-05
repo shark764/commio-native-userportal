@@ -15,9 +15,11 @@ const pak = {
     '@dfhernandez/js-utilities': '*',
     '@dfhernandez/native-theme': '*',
     react: '*',
+    'react-dom': '*',
     'react-native': '*',
     'react-native-svg': '*',
     'styled-components': '*',
+    tslib: '*',
   },
 };
 // sds-react-native-components
