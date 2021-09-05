@@ -33,7 +33,7 @@
   "dependencies": {
     "@dfhernandez/js-utilities": "^0.4.2",
     "@dfhernandez/native-theme": "^0.1.2",
-    "@dfhernandez/sds-react-native-components": "^1.7.1",
+    "@dfhernandez/sds-react-native-components": "^1.7.5",
     "@expo/vector-icons": "^12.0.0",
     "expo": "~42.0.1",
     "expo-asset": "~8.3.3",
@@ -76,7 +76,6 @@
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-preset-expo": "8.3.0",
     "commitlint": "^11.0.0",
-    "concurrently": "^6.2.1",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",

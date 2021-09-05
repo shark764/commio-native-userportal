@@ -6,11 +6,12 @@ import {
   SvgFromXml,
   SvgFromXmlFile,
   SvgFromXmlString,
+  SizeProps,
 } from '@dfhernandez/sds-react-native-components';
 import { capitalize } from '@dfhernandez/js-utilities';
 import type { ThemeProps } from '@dfhernandez/native-theme';
 import styled, { useTheme } from 'styled-components/native';
-import { Dimensions, Slider } from 'react-native';
+import { Dimensions } from 'react-native';
 import BallIcon from '@assets/dynamic-colors/ball.svg';
 import AvatarIcon from '@assets/dynamic-colors/avatar.svg';
 import HeartIcon from '@assets/dynamic-colors/heart.svg';
@@ -32,7 +33,19 @@ const colors = [
   'orange',
   'lightgreen',
   'cyan',
+  'darkblue',
+  'darkcyan',
+  '#47915d',
 ];
+const sizes: { [key: number]: SizeProps; } = {
+  // 0: 'default',
+  0: 'xsmall',
+  1: 'small',
+  2: 'medium',
+  3: 'large',
+  4: 'xlarge',
+};
+const getIconSize = (idx: number): SizeProps => sizes[idx > 5 ? 5 : idx];
 
 const xml = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -102,6 +115,16 @@ const IconContainer = styled.View`
   flex-wrap: wrap;
   padding-top: 20px;
 `;
+const StyledSlider = styled.Slider`
+  margin-top: 30px;
+  width: 90%;
+`;
+const Divider = styled.View`
+  border-bottom-color: ${({ theme }) => theme.colors.main};
+  border-bottom-width: 1px;
+  width: 70%;
+  padding: 20px;
+`;
 
 export function Example ({
   setThemeMode,
@@ -110,9 +133,10 @@ export function Example ({
 }) {
   const theme = useTheme();
 
-  const [index, setIndex] = React.useState(1);
-  const primaryColor = colors[index - 1];
-  const secondaryColor = colors[index % colors.length];
+  const [colorIndex, setColorIndex] = React.useState(1);
+  const [sizeIndex, setSizeIndex] = React.useState(0);
+  const primaryColor = colors[colorIndex - 1];
+  const secondaryColor = colors[colorIndex % colors.length];
 
   return (
     <Container>
@@ -122,6 +146,7 @@ export function Example ({
         size="xlarge"
         content={`You are using ${capitalize(theme.mode)} mode`}
       />
+
       {/* Example of Button */}
       <Button
         onPress={() => setThemeMode('dark')}
@@ -129,6 +154,7 @@ export function Example ({
         color="#000"
         size="xsmall"
       />
+
       <Button
         onPress={() => setThemeMode('light')}
         title="Active light mode"
@@ -145,42 +171,52 @@ export function Example ({
         color={theme.colors.button.secondary}
         size="xsmall"
       />
+
+      <Divider />
+
       {/* Example of Telicon */}
       <IconContainer>
         <Telicon
           name="star"
-          size="large"
+          // size="large"
+          size={getIconSize(sizeIndex + 3)}
+          fill={theme.colors.icon.main}
+          fillSecondary="#630007"
+        />
+        <Telicon
+          name="star"
+          // size="large"
+          size={getIconSize(sizeIndex + 2)}
+          fill={theme.colors.icon.main}
+          fillSecondary="#630007"
+        />
+        <Telicon
+          name="star"
+          // size="large"
+          size={getIconSize(sizeIndex + 1)}
           fill={theme.colors.icon.secondary}
           fillSecondary="#630007"
         />
         <Telicon
           name="star"
-          size="medium"
-          fill={theme.colors.icon.secondary}
-          fillSecondary="#630007"
-        />
-        <Telicon
-          name="star"
-          size="small"
-          fill={theme.colors.icon.secondary}
-          fillSecondary="#630007"
-        />
-        <Telicon
-          name="star"
-          size="xsmall"
+          // size="large"
+          size={getIconSize(sizeIndex)}
           fill={theme.colors.icon.secondary}
           fillSecondary="#630007"
         />
       </IconContainer>
+
+      <StyledSlider
+        step={1}
+        minimumValue={0}
+        maximumValue={5}
+        onValueChange={setSizeIndex}
+      />
+
+      <Divider />
+
+      {/* Example of SvgFromXml using app's configuration */}
       <IconContainer>
-        <SvgFromXml
-          name="Useless-Property"
-          xml={xml}
-          width={100}
-          height={100}
-          fill="magenta"
-          fillSecondary="black"
-        />
         <BallIcon
           width={iconSize}
           height={iconSize}
@@ -193,95 +229,63 @@ export function Example ({
           fill={primaryColor}
           fillSecondary={secondaryColor}
         />
-        <SvgFromXmlFile
-          name="Useless-Property"
-          Xml={AvatarIcon}
+        <HeartIcon
           width={iconSize}
           height={iconSize}
-          fill={primaryColor}
-          fillSecondary={secondaryColor}
-        />
-        <SvgFromXmlString
-          name="Useless-Property"
-          xml={xml2}
-          width={iconSize}
-          height={iconSize}
-          fill={primaryColor}
-          fillSecondary={secondaryColor}
-        />
-        <SvgFromXml
-          name="Useless-Property"
-          xml={HeartIcon}
-          width={iconSize}
-          height={iconSize}
-          fill={primaryColor}
-          fillSecondary={secondaryColor}
-        />
-        <Telicon
-          name="global"
-          size="default"
-          fill={primaryColor}
-          fillSecondary={secondaryColor}
-        />
-        <Telicon
-          name="volume-slash"
-          size="default"
           fill={primaryColor}
           fillSecondary={secondaryColor}
         />
       </IconContainer>
-      <Slider
+
+      <Divider />
+
+      {/* Example of SvgFromXml */}
+      <IconContainer>
+        <SvgFromXml
+          xml={xml}
+          width={iconSize}
+          height={iconSize}
+          size="small"
+          fill={primaryColor}
+          fillSecondary={secondaryColor}
+        />
+        <SvgFromXml
+          xml={AvatarIcon}
+          size="small"
+          fill={primaryColor}
+          fillSecondary={secondaryColor}
+        />
+        <SvgFromXmlString
+          xml={xml2}
+          width={theme.sizes.icon.medium}
+          height={theme.sizes.icon.medium}
+          size="medium"
+          fill={primaryColor}
+          fillSecondary={secondaryColor}
+        />
+        <SvgFromXmlFile
+          Xml={HeartIcon}
+          width={theme.sizes.icon.small}
+          height={theme.sizes.icon.small}
+          size="large"
+          fill={primaryColor}
+          fillSecondary={secondaryColor}
+        />
+      </IconContainer>
+
+      <StyledSlider
         step={1}
-        minimumValue={1}
+        minimumValue={0}
         maximumValue={colors.length}
-        onValueChange={setIndex}
-        style={styles.slider}
+        onValueChange={setColorIndex}
       />
-      <Button onPress={() => setIndex((idx) => idx + 1)} title="Next color" />
-      <Telicon
-        name="available-balance"
-        size="xlarge"
-        fill={theme.colors.icon.main}
-        fillSecondary="#630007"
+
+      <Button
+        onPress={() => setColorIndex((idx) => idx + 1)}
+        title="Next color"
       />
     </Container>
   );
 }
-
-const styles = {
-  logo: {
-    marginTop: 20,
-    marginBottom: 20,
-  },
-  container: {
-    flex: 1,
-    backgroundColor: '#f5f5f5',
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-  },
-  row: {
-    paddingTop: 20,
-  },
-  slider: {
-    marginTop: 30,
-    width: '90%',
-  },
-  scrollView: {
-    // width: '100%',
-  },
-  containerStyles: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
-  containerPlanet: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  planet: {
-    margin: 10,
-  },
-};
 
 export default Example;
