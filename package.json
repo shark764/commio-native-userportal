@@ -1,6 +1,6 @@
 {
   "name": "react-native-commio-userportal",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Comm.io - User Portal - React Native version",
   "author": "Daniel Hernandez <fhernandez@2600hz.com>",
   "main": "index.js",
