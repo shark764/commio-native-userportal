@@ -2,6 +2,33 @@
 # yarn lockfile v1
 
 
+"@2600hz/js-utilities@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@2600hz/js-utilities/-/js-utilities-0.1.0.tgz#d8d3ef2a05f45d65aad2c0b1022541c70f3a811b"
+  integrity sha512-QQo/e7mV5GzevH7iZZ6kSEDrbzjXK92U1lPkAftdDULiI5wIOZDnQz2vndOy66FgfvV5x2CqWsRTqFgsMCocnQ==
+
+"@2600hz/sds-native-theme@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@2600hz/sds-native-theme/-/sds-native-theme-0.1.0.tgz#280f2ad68f889cdbf2a3617e50d6e44cda7728f3"
+  integrity sha512-QtddzZv1P/bdZO4RJg5Y3otpwipo77kQgTxY30lrsOFHZ/0EAjwMaglFDYdHiZwdN6NaD1l2dJDIS3UckDvA0w==
+  dependencies:
+    "@2600hz/js-utilities" "^0.1.0"
+    styled-components "^5.3.0"
+
+"@2600hz/sds-react-native-components@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@2600hz/sds-react-native-components/-/sds-react-native-components-0.1.0.tgz#a55c3382256eaa11e4ebd2b81f0ae5317be561d0"
+  integrity sha512-zxD8o7YFt5ciO/59GyK/0XN6+g5R0/SE25J4TBFK/MLVlksXn+h8eYqO/Cq8F5CqAVrsqAxpJcF+ijkYigsZyw==
+  dependencies:
+    "@2600hz/js-utilities" "^0.1.0"
+    "@2600hz/sds-native-theme" "^0.1.0"
+    react "16.13.1"
+    react-dom "16.13.1"
+    react-native "0.63.4"
+    react-native-svg "12.1.1"
+    styled-components "^5.3.0"
+    tslib "^2.0.3"
+
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -1454,33 +1481,6 @@
   integrity sha512-zcVjuT+OfKt8h91vhBxt05RMcTGEx6DM7Q9QZeuMbXFk6xgbsSEDMMapbJPA1bCZ81fa/1OQBijSYPrKvtt06g==
   dependencies:
     chalk "^4.0.0"
-
-"@dfhernandez/js-utilities@^0.4.2":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/js-utilities/-/js-utilities-0.4.2.tgz#defb0427f7bdf6dcbe7a8170e0e7d5e59f5b6c7a"
-  integrity sha512-iUTmffo+tyh86jBSq6xVEsaMY8aSvXxBpdCZjbhPf8WAs8aSIu7+oOJNtlPxW8n6e/OjLd0XHvXNOpeO/rw+Gw==
-
-"@dfhernandez/native-theme@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/native-theme/-/native-theme-0.1.2.tgz#3035853c9af42f4fbdca88959553bdaa6531a6d5"
-  integrity sha512-jwG1fcS3EJ2g4NyS8EA+llH4tWFNxOMFCek3ip/7leBdKsdcVCYekiYp7US3UdldTNRnGpsIwDrOoBlYf2JDOw==
-  dependencies:
-    "@dfhernandez/js-utilities" "^0.4.2"
-    styled-components "^5.3.0"
-
-"@dfhernandez/sds-react-native-components@^1.7.6":
-  version "1.7.6"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/sds-react-native-components/-/sds-react-native-components-1.7.6.tgz#72c0ddeac4b1756338fc9085dd9204a753548725"
-  integrity sha512-blWvla0+nGiZ8X4cSeuJ7QyStXik0B5/6KCZsObNK/GiljRXVBjdNsDlA4/J6vKuZOB4WQx38AUa/lPbAgdHoQ==
-  dependencies:
-    "@dfhernandez/js-utilities" "^0.4.2"
-    "@dfhernandez/native-theme" "^0.1.2"
-    react "16.13.1"
-    react-dom "16.13.1"
-    react-native "0.63.4"
-    react-native-svg "12.1.1"
-    styled-components "^5.3.0"
-    tslib "^2.0.3"
 
 "@egjs/hammerjs@^2.0.17":
   version "2.0.17"

@@ -94,7 +94,7 @@ Userportal uses a number of open source projects to work properly:
 - [Luxon](https://moment.github.io/luxon/) - library for dealing with dates and times in JavaScript (better alternative than Moment.js)
 - [Styled-Components](https://styled-components.com/) - Library to style react components
 - [react-native-svg](https://www.npmjs.com/package/react-native-svg) - Provides SVG support to React Native on iOS and Android, and a compatibility layer for the web
-- [@2600hz/sds-react-native-components](https://www.npmjs.com/package/@dfhernandez/sds-react-native-components) - React Native components
+- [@2600hz/sds-react-native-components](https://www.npmjs.com/package/@2600hz/sds-react-native-components) - React Native components
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -122,6 +122,12 @@ Follow [Semantic Versioning 2.0.0](https://semver.org/) to update project versio
 - **BREAKING CHANGE** - regardless of type, indicates a Major release (MAJOR) ex. v1.0.0
 
 Visit [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) for more examples.
+
+**Make a release**
+Run following command after your last commit/amend. Then answer with Y/N the prompt
+```bash
+yarn release
+```
 
 ## License
 
