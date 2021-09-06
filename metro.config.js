@@ -12,8 +12,8 @@ const { getDefaultConfig } = require('expo/metro-config');
 // const pak = require('../sds-react-native-components/package.json');
 const pak = {
   peerDependencies: {
-    '@2600hz/js-utilities': '*',
-    '@2600hz/sds-native-theme': '*',
+    '@dfhernandez/js-utilities': '*',
+    '@dfhernandez/sds-native-theme': '*',
     react: '*',
     'react-dom': '*',
     'react-native': '*',

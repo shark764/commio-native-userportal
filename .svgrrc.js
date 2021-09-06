@@ -1,4 +1,4 @@
-const { svgrrcBaseConfig } = require('@2600hz/js-utilities');
+const { svgrrcBaseConfig } = require('@dfhernandez/js-utilities');
 
 module.exports = {
   ...svgrrcBaseConfig,

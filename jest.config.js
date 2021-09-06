@@ -1,3 +1,3 @@
-const { jestConfig } = require('@2600hz/js-utilities');
+const { jestConfig } = require('@dfhernandez/js-utilities');
 
 module.exports = jestConfig;

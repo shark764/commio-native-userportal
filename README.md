@@ -25,12 +25,12 @@ yarn
 ## Components library - Usage
 
 Add symlink
-See [Linked library](https://github.com/shark764/@2600hz/sds-react-native-components)
+See [Linked library](https://github.com/shark764/@dfhernandez/sds-react-native-components)
 
-**Consume the package @2600hz/sds-react-native-components**
+**Consume the package @dfhernandez/sds-react-native-components**
 `Both projects must be placed on same folder, otherwise won't work`
 ```bash
-yarn link @2600hz/sds-react-native-components
+yarn link @dfhernandez/sds-react-native-components
 ```
 
 ## Run app
@@ -94,7 +94,7 @@ Userportal uses a number of open source projects to work properly:
 - [Luxon](https://moment.github.io/luxon/) - library for dealing with dates and times in JavaScript (better alternative than Moment.js)
 - [Styled-Components](https://styled-components.com/) - Library to style react components
 - [react-native-svg](https://www.npmjs.com/package/react-native-svg) - Provides SVG support to React Native on iOS and Android, and a compatibility layer for the web
-- [@2600hz/sds-react-native-components](https://www.npmjs.com/package/@2600hz/sds-react-native-components) - React Native components
+- [@dfhernandez/sds-react-native-components](https://www.npmjs.com/package/@dfhernandez/sds-react-native-components) - React Native components
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

@@ -1,5 +1,5 @@
 declare module '*.svg' {
-  import { SvgXmlFileType } from '@2600hz/sds-react-native-components';
+  import { SvgXmlFileType } from '@dfhernandez/sds-react-native-components';
 
   const content: SvgXmlFileType;
 

@@ -1,4 +1,4 @@
-const { releaseItBaseConfig } = require('@2600hz/js-utilities');
+const { releaseItBaseConfig } = require('@dfhernandez/js-utilities');
 
 releaseItBaseConfig.npm.publish = false;
 delete releaseItBaseConfig.hooks['after:bump'];

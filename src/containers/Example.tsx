@@ -7,9 +7,9 @@ import {
   SvgFromXmlFile,
   SvgFromXmlString,
   SizeProps,
-} from '@2600hz/sds-react-native-components';
-import { capitalize } from '@2600hz/js-utilities';
-import type { ThemeProps } from '@2600hz/sds-native-theme';
+} from '@dfhernandez/sds-react-native-components';
+import { capitalize } from '@dfhernandez/js-utilities';
+import type { ThemeProps } from '@dfhernandez/sds-native-theme';
 import styled, { useTheme } from 'styled-components/native';
 import { Dimensions } from 'react-native';
 import BallIcon from '@assets/dynamic-colors/ball.svg';

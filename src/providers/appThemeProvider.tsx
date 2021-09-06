@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components/native';
-import { darkTheme, lightTheme } from '@2600hz/sds-native-theme';
+import { darkTheme, lightTheme } from '@dfhernandez/sds-native-theme';
 
 interface Props {
   mode: string;

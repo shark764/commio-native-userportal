@@ -119,7 +119,7 @@ The `package.json` file contains various scripts for common tasks:
 - `yarn expo:start`: start the Metro server for the app.
 - `yarn`: install all dependencies and generate lib/ folder.
 - `yarn link`: create symlink.
-- `yarn link @2600hz/sds-react-native-components`: consume symlink from components library
+- `yarn link @dfhernandez/sds-react-native-components`: consume symlink from components library
 
 ### Sending a pull request
 

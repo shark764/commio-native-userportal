@@ -35,7 +35,7 @@
     "metro.config.js",
     "webpack.config.js"
   ],
-  "extends": "@2600hz/js-utilities/tsconfig.base",
+  "extends": "@dfhernandez/js-utilities/tsconfig.base",
   "filesGlob": [
     "typings/index.d.ts",
     "src/**/*.ts",

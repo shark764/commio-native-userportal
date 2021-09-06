@@ -1,3 +1,3 @@
-const { eslintNativeConfig } = require('@2600hz/js-utilities');
+const { eslintNativeConfig } = require('@dfhernandez/js-utilities');
 
 module.exports = eslintNativeConfig(__dirname);
