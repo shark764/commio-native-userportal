@@ -1,4 +1,4 @@
-const path = require('path');
+// const path = require('path');
 // const pak = require('../rn-library-test-aug17/package.json');
 // const pak = require('../sds-react-native-components/package.json');
 // const pak = {
