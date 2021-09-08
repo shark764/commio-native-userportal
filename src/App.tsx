@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { SafeAreaView, ScrollView } from 'react-native';
 
 import { StatusBar } from 'expo-status-bar';
 import * as Updates from 'expo-updates';
-import { SafeAreaView, ScrollView } from 'react-native';
 
 import Example from './modules/Example';
 import AppThemeProvider from './providers/appThemeProvider';

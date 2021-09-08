@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { Dimensions } from 'react-native';
+
 import styled, { useTheme } from 'styled-components/native';
 
 import ReactIcon from '@assets/svg/react-logo.svg';
@@ -126,6 +126,7 @@ export function Example ({
           xml={ReactIcon}
           width={iconSize}
           height={iconSize}
+          size="small"
           fill={theme.colors.icon.main}
           fillSecondary={theme.colors.icon.secondary}
         />
@@ -133,14 +134,16 @@ export function Example ({
           xml={expoXml}
           width={theme.sizes.icon.small}
           height={theme.sizes.icon.small}
+          size="small"
           fill={theme.colors.icon.main}
           fillSecondary={theme.colors.icon.secondary}
         />
         <SvgFromXmlFile
           Xml={ReactIcon}
-          width={theme.sizes.icon.small}
-          height={theme.sizes.icon.small}
-          size="medium"
+          width={theme.sizes.icon.large}
+          height={theme.sizes.icon.large}
+          // size="large"
+          // size="small"
           fill={theme.colors.icon.main}
           fillSecondary={theme.colors.icon.secondary}
         />

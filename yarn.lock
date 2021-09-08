@@ -1468,10 +1468,10 @@
     "@dfhernandez/js-utilities" "^0.5.0"
     styled-components "^5.3.0"
 
-"@dfhernandez/sds-react-native-components@^1.7.7":
-  version "1.7.7"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/sds-react-native-components/-/sds-react-native-components-1.7.7.tgz#bf48d1704b361b7b8ae5dfe21f71885528b1c8e2"
-  integrity sha512-DHhugwV9JloyhyFKCLJuHEtFGs8dt61u2MxrUgulRf6DzK2KwOS1mISvpGIQdevyWKp6IwLP0TCXEa8UIEKSBQ==
+"@dfhernandez/sds-react-native-components@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@dfhernandez/sds-react-native-components/-/sds-react-native-components-1.8.0.tgz#c61aebff342398324341925bd5642ac5383a1897"
+  integrity sha512-F9K1MjFb7qGOy0cZcouB1nWcTK1gp3WD6KwENzxM2gLN3ud+eB7QWu1tDRLVrhFIj2tg8gvDfDgRyo+NpR0Xng==
   dependencies:
     "@dfhernandez/js-utilities" "^0.5.0"
     "@dfhernandez/sds-native-theme" "^0.2.0"

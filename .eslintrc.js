@@ -6,10 +6,10 @@ nativeConfig.rules = {
   'import/order': [
     'error',
     {
-      groups: ['builtin', 'external', 'internal'],
+      groups: ['builtin', 'external', 'internal', ['parent', 'sibling']],
       pathGroups: [
         {
-          pattern: 'react',
+          pattern: 'react+(|-native)',
           group: 'external',
           position: 'before',
         },
