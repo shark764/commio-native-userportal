@@ -1,5 +1,7 @@
 import * as React from 'react';
+
 import { DefaultTheme, ThemeProvider } from 'styled-components/native';
+
 import { darkTheme, lightTheme } from '@dfhernandez/sds-native-theme';
 
 interface Props {

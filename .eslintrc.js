@@ -1,3 +1,37 @@
 const { eslintNativeConfig } = require('@dfhernandez/js-utilities');
 
-module.exports = eslintNativeConfig(__dirname);
+const nativeConfig = eslintNativeConfig(__dirname);
+nativeConfig.rules = {
+  ...nativeConfig.rules,
+  'import/order': [
+    'error',
+    {
+      groups: ['builtin', 'external', 'internal'],
+      pathGroups: [
+        {
+          pattern: 'react',
+          group: 'external',
+          position: 'before',
+        },
+        {
+          pattern: '@/**',
+          group: 'parent',
+          position: 'before',
+        },
+        {
+          pattern: '@**/**',
+          group: 'parent',
+          position: 'before',
+        },
+      ],
+      pathGroupsExcludedImportTypes: ['react'],
+      'newlines-between': 'always',
+      alphabetize: {
+        order: 'asc',
+        caseInsensitive: true,
+      },
+    },
+  ],
+};
+
+module.exports = nativeConfig;
