@@ -1,3 +1,5 @@
+## [1.2.1](https://github.com/2600hz/commio-native-userportal/compare/v1.2.0...v1.2.1) (2021-09-09)
+
 # [1.2.0](https://github.com/2600hz/commio-native-userportal/compare/v1.1.4...v1.2.0) (2021-09-09)
 
 
