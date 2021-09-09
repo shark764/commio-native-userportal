@@ -1,3 +1,16 @@
+# [1.2.0](https://github.com/2600hz/commio-native-userportal/compare/v1.1.4...v1.2.0) (2021-09-09)
+
+
+### Bug Fixes
+
+* Adding missing files to run app on android ([fefb6c7](https://github.com/2600hz/commio-native-userportal/commit/fefb6c729477aac08a2873a598d18272826c4597))
+
+
+### Features
+
+* Changing project name and moving to new repo under 2600hz org | Bumping packages versions ([c1fdc69](https://github.com/2600hz/commio-native-userportal/commit/c1fdc6917035f73db50ff217fd6e12da8d2dcb2e))
+* Publishing app to expo for testing ([368f652](https://github.com/2600hz/commio-native-userportal/commit/368f6523a2d16fd0c5163600e223abd0ec14ce5c))
+
 ## [1.1.4](https://github.com/shark764/react-native-commio-userportal/compare/v1.1.3...v1.1.4) (2021-09-06)
 
 ## [1.1.3](https://github.com/shark764/react-native-commio-userportal/compare/v1.1.2...v1.1.3) (2021-09-06)
