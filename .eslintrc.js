@@ -1,4 +1,4 @@
-const { eslintNativeConfig } = require('@dfhernandez/js-utilities');
+const { eslintNativeConfig } = require('@2600hz/commio-native-utilities');
 
 const nativeConfig = eslintNativeConfig(__dirname);
 nativeConfig.rules = {

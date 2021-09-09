@@ -5,7 +5,7 @@
   <br>
   <br>
   <p>
-    <b>react-native-commio-userportal</b>
+    <b>commio-native-userportal</b>
   </p>
   <p>
      <i>React native application for commio-userportal development.</i>
@@ -20,7 +20,7 @@
 ---
 
 # 2600Hz - Commio
-## _react-native-commio-userportal_
+## _commio-native-userportal_
 
 App that contains User Portal module of Comm.io
 
@@ -49,7 +49,7 @@ yarn
 **Usage**
 Install it by running
 ```bash
-yarn add @dfhernandez/sds-react-native-components
+yarn add @2600hz/sds-react-native-components
 ```
 
 **Development and testing**
@@ -57,12 +57,12 @@ In case you need to work on the library locally, you can link it to userportal a
 This doesn't work same way as web apps, there are more configurations needed in order to work properly
 
 **Add symlink**
-See [Linked library](https://github.com/shark764/@dfhernandez/sds-react-native-components)
+See [Linked library](https://github.com/2600hz/sds-react-native-components)
 
-**Consume the package @dfhernandez/sds-react-native-components**
+**Consume the package @2600hz/sds-react-native-components**
 `Both projects must be placed on same folder, otherwise won't work`
 ```bash
-yarn link @dfhernandez/sds-react-native-components
+yarn link @2600hz/sds-react-native-components
 ```
 
 **Fix for peerDependencies**
@@ -77,8 +77,8 @@ const escape = require('escape-string-regexp');
 const root = path.resolve(__dirname, '..', 'sds-react-native-components');
 
 const modules = [
-  '@dfhernandez/js-utilities',
-  '@dfhernandez/sds-native-theme',
+  '@2600hz/commio-native-utilities',
+  '@2600hz/sds-react-native-theme',
   'react',
   'react-dom',
   'react-native',
@@ -150,7 +150,8 @@ module.exports = function (api) {
 
             // For development, we want to alias the library to the source
             // Remember we have the package folder right next to the app
-            '@dfhernandez/sds-react-native-components': path.join(__dirname, '..', 'sds-react-native-components', 'src/index'),
+            // Assuming your package folder is named "sds-react-native-components"
+            '@2600hz/sds-react-native-components': path.join(__dirname, '..', 'sds-react-native-components', 'src/index'),
           },
         },
       ],
@@ -194,13 +195,50 @@ yarn expo:start
 Run android
 ```bash
 yarn android
+# OR
+react-native run-android
 ```
 
 Run ios
 ```bash
 cd ios & pod install
+
 yarn ios
+#OR
+react-native run-ios
 ```
+
+** Problem with running Android**
+If the command `yarn android` doesn't work, follow these steps
+
+```bash
+# Go to your project directory and check if this folder exists
+ls android/app/src/main/assets
+
+# If the folder assets doesn’t exist then create the assets directory there.
+mkdir android/app/src/main/assets
+
+# If it exists then delete the files "index.android.bundle" and "index.android.bundle.meta"
+rm android/app/src/main/assets/{index.android.bundle,index.android.bundle.meta}
+
+# Clean gradlew
+# From your root project directory do
+cd android
+./gradlew clean
+# Navigate back to root
+cd ../
+
+# Assuming only one entry point "index.js"
+react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+
+# If there are two files i.e index.android.js and index.ios.js then run this
+react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res
+
+# react-native run-android
+yarn android
+```
+
+
 
 ## Utilities
 
@@ -240,9 +278,9 @@ Userportal uses a number of open source projects to work properly:
 - [Luxon](https://moment.github.io/luxon/) - library for dealing with dates and times in JavaScript (better alternative than Moment.js)
 - [Styled-Components](https://styled-components.com/) - Library to style react components
 - [react-native-svg](https://www.npmjs.com/package/react-native-svg) - Provides SVG support to React Native on iOS and Android, and a compatibility layer for the web
-- [@dfhernandez/sds-react-native-components](https://www.npmjs.com/package/@dfhernandez/sds-react-native-components) - React Native components
-- [@dfhernandez/sds-native-theme](https://www.npmjs.com/package/@dfhernandez/sds-native-theme) - React Native Theme for Styled-components
-- [@dfhernandez/js-utilities](https://www.npmjs.com/package/@dfhernandez/js-utilities) - Library written in js for shareable config files and common functions
+- [@2600hz/sds-react-native-components](https://www.npmjs.com/package/@2600hz/sds-react-native-components) - React Native components
+- [@2600hz/sds-react-native-theme](https://www.npmjs.com/package/@2600hz/sds-react-native-theme) - React Native Theme for Styled-components
+- [@2600hz/commio-native-utilities](https://www.npmjs.com/package/@2600hz/commio-native-utilities) - Library written in js for shareable config files and common functions
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

@@ -3,7 +3,7 @@
 // const pak = require('../sds-react-native-components/package.json');
 // const pak = {
 //   name: 'rn-library-test-aug17',
-//   name: '@dfhernandez/sds-react-native-components',
+//   name: '@2600hz/sds-react-native-components',
 //   source: 'src/index',
 // };
 

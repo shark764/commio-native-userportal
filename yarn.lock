@@ -2,6 +2,32 @@
 # yarn lockfile v1
 
 
+"@2600hz/commio-native-utilities@^0.5.1":
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/@2600hz/commio-native-utilities/-/commio-native-utilities-0.5.1.tgz#855acd0bb0ee30d50992af1805d39570cf911671"
+  integrity sha512-Sq0zpHZIKQoBBdbQRDYcM2JLzas9fvUriaL/aiRFgB03UUw1q+Ucd3fxkIibRo0uj8o4S4JjcQuZF/pFelQEIQ==
+
+"@2600hz/sds-react-native-components@^1.8.1":
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@2600hz/sds-react-native-components/-/sds-react-native-components-1.8.1.tgz#2c0563414db546313beb8c98f89b661fcd6a28d7"
+  integrity sha512-aaJci7aNgA3yTMM+w/RucdeV0OU4m1sOtuYnIoqjxdWHNgZRFnKTx5MC4psU0wOCJ1sinPw+yWgAyK4uZX0YPA==
+  dependencies:
+    "@2600hz/commio-native-utilities" "^0.5.1"
+    "@2600hz/sds-react-native-theme" "^0.2.2"
+    react "16.13.1"
+    react-dom "16.13.1"
+    react-native "0.63.4"
+    react-native-svg "12.1.1"
+    styled-components "^5.3.0"
+    tslib "^2.0.3"
+
+"@2600hz/sds-react-native-theme@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@2600hz/sds-react-native-theme/-/sds-react-native-theme-0.2.2.tgz#9664c1b77696d169a0ba30190f7a9ce55232f3e5"
+  integrity sha512-SJGA1dbCMLtMSC4VIH0060U0XsWKL/x5AHrb4b4FxInRXvnyCc03Sfl5jYGD4c+TUaioMI3oaMpo8KzOAkgwSQ==
+  dependencies:
+    "@2600hz/commio-native-utilities" "^0.5.1"
+
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -1454,33 +1480,6 @@
   integrity sha512-zcVjuT+OfKt8h91vhBxt05RMcTGEx6DM7Q9QZeuMbXFk6xgbsSEDMMapbJPA1bCZ81fa/1OQBijSYPrKvtt06g==
   dependencies:
     chalk "^4.0.0"
-
-"@dfhernandez/js-utilities@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/js-utilities/-/js-utilities-0.5.0.tgz#6cd31120388b55c3da280dac121a62dfe49c700d"
-  integrity sha512-snsv2HBKQdkiQ5qrRwUOer624IQT93R/h/ecn70JcnGuwUCY5lVeCaKfJBe0ZfgWaGPWlWdWpoVHmnbPsa7tNw==
-
-"@dfhernandez/sds-native-theme@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/sds-native-theme/-/sds-native-theme-0.2.0.tgz#f4a2a53928b8afb86da226af754b9f7c60fcfe84"
-  integrity sha512-AZXi+atVgekEmgvjKyC337pG/9ye9YlYw9IKQlzGDCI5Rxa+tPEOGkpmLHgVFWxwT9wh70oNVOsRpxUQW3TFNg==
-  dependencies:
-    "@dfhernandez/js-utilities" "^0.5.0"
-    styled-components "^5.3.0"
-
-"@dfhernandez/sds-react-native-components@^1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@dfhernandez/sds-react-native-components/-/sds-react-native-components-1.8.0.tgz#c61aebff342398324341925bd5642ac5383a1897"
-  integrity sha512-F9K1MjFb7qGOy0cZcouB1nWcTK1gp3WD6KwENzxM2gLN3ud+eB7QWu1tDRLVrhFIj2tg8gvDfDgRyo+NpR0Xng==
-  dependencies:
-    "@dfhernandez/js-utilities" "^0.5.0"
-    "@dfhernandez/sds-native-theme" "^0.2.0"
-    react "16.13.1"
-    react-dom "16.13.1"
-    react-native "0.63.4"
-    react-native-svg "12.1.1"
-    styled-components "^5.3.0"
-    tslib "^2.0.3"
 
 "@egjs/hammerjs@^2.0.17":
   version "2.0.17"

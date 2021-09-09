@@ -3,9 +3,7 @@ import { Dimensions } from 'react-native';
 
 import styled, { useTheme } from 'styled-components/native';
 
-import ReactIcon from '@assets/svg/react-logo.svg';
-import { capitalize } from '@dfhernandez/js-utilities';
-import type { ThemeProps } from '@dfhernandez/sds-native-theme';
+import { capitalize } from '@2600hz/commio-native-utilities';
 import {
   Button,
   TextInfo,
@@ -13,7 +11,9 @@ import {
   SvgFromXml,
   SvgFromXmlFile,
   SvgFromXmlString,
-} from '@dfhernandez/sds-react-native-components';
+} from '@2600hz/sds-react-native-components';
+import type { ThemeProps } from '@2600hz/sds-react-native-theme';
+import ReactIcon from '@assets/svg/react-logo.svg';
 
 import { expoXml, githubXml } from './utils';
 
@@ -52,7 +52,6 @@ export function Example ({
   return (
     <Container>
       {/* Example of Text */}
-
       <TextInfo
         color={theme.colors.font.main}
         size="xlarge"

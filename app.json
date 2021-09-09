@@ -1,9 +1,9 @@
 {
-  "name": "react-native-commio-userportal",
-  "displayName": "react-native-commio-userportal",
+  "name": "commio-native-userportal",
+  "displayName": "commio-native-userportal",
   "expo": {
-    "name": "react-native-commio-userportal",
-    "slug": "react-native-commio-userportal",
+    "name": "commio-native-userportal",
+    "slug": "commio-native-userportal",
     "version": "1.0.0",
     "platforms": ["ios", "android", "web"],
     "assetBundlePatterns": ["**/*"],
@@ -27,7 +27,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -38,7 +38,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+        "backgroundColor": "#000000"
       }
     },
     "web": {

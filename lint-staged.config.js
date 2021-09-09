@@ -1,5 +1,5 @@
 // lint-staged.config.js
 
-const { lintStagedBaseConfig } = require('@dfhernandez/js-utilities');
+const { lintStagedBaseConfig } = require('@2600hz/commio-native-utilities');
 
 module.exports = lintStagedBaseConfig;
