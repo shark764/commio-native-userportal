@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "commio-native-userportal",
+    "slug": "commio-native-userportal",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "commio-native-userportal"
+}
