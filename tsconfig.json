@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "jsx": "react-native",
+    "lib": ["es2017", "ESNext"],
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@config/*": ["src/config/*"],
+      "@containers/*": ["src/containers/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@modules/*": ["src/modules/*"],
+      "@providers/*": ["src/providers/*"],
+      "@shared/*": ["src/shared/*"],
+      "@styles/*": ["src/styles/*"],
+      "@utilities/*": ["src/utilities/*"],
+      "tests": ["tests/*"]
+    }
+  },
+  "exclude": [
+    "__tests__/**/*-test.ts",
+    "tests",
+    "dist",
+    "node_modules",
+    "build",
+    "lib",
+    "coverage",
+    ".eslintrc.js",
+    ".svgrrc.js",
+    "babel.config.js",
+    "commitlint.config.js",
+    "jest.config.js",
+    "lint-staged.config.js",
+    "metro.config.js",
+    "webpack.config.js"
+  ],
+  "extends": "@2600hz/commio-native-utilities/tsconfig.base",
+  "filesGlob": [
+    "typings/index.d.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "node_modules/typescript/lib/lib.es6.d.ts"
+  ],
+  "include": ["**/*.js", "**/*.ts", "./*", "./**/*", "./src"],
+  "types": [
+    "react",
+    "react-dom",
+    "react-native",
+    "react-test-renderer",
+    "jest",
+    "styled-components-react-native"
+  ]
+}
