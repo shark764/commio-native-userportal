@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "reactnativecommiouserportal.app"
-               BlueprintName = "reactnativecommiouserportal"
-               ReferencedContainer = "container:reactnativecommiouserportal.xcodeproj">
+               BuildableName = "commionativeuserportal.app"
+               BlueprintName = "commionativeuserportal"
+               ReferencedContainer = "container:commionativeuserportal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "reactnativecommiouserportalTests.xctest"
-               BlueprintName = "reactnativecommiouserportalTests"
-               ReferencedContainer = "container:reactnativecommiouserportal.xcodeproj">
+               BuildableName = "commionativeuserportalTests.xctest"
+               BlueprintName = "commionativeuserportalTests"
+               ReferencedContainer = "container:commionativeuserportal.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "reactnativecommiouserportal.app"
-            BlueprintName = "reactnativecommiouserportal"
-            ReferencedContainer = "container:reactnativecommiouserportal.xcodeproj">
+            BuildableName = "commionativeuserportal.app"
+            BlueprintName = "commionativeuserportal"
+            ReferencedContainer = "container:commionativeuserportal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "reactnativecommiouserportal.app"
-            BlueprintName = "reactnativecommiouserportal"
-            ReferencedContainer = "container:reactnativecommiouserportal.xcodeproj">
+            BuildableName = "commionativeuserportal.app"
+            BlueprintName = "commionativeuserportal"
+            ReferencedContainer = "container:commionativeuserportal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

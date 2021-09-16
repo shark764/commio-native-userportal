@@ -1,4 +1,4 @@
-package com.reactnativecommiouserportal.generated;
+package com.commionativeuserportal.generated;
 
 import java.util.Arrays;
 import java.util.List;

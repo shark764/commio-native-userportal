@@ -1,4 +1,4 @@
-package com.reactnativecommiouserportal;
+package com.commionativeuserportal;
 
 import android.os.Bundle;
 

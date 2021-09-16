@@ -11,14 +11,16 @@ import {
   SvgFromXml,
   SvgFromXmlFile,
   SvgFromXmlString,
+  SizeProps,
 } from '@2600hz/sds-react-native-components';
 import type { ThemeProps } from '@2600hz/sds-react-native-theme';
+import JsIcon from '@assets/svg/js-logo.svg';
 import ReactIcon from '@assets/svg/react-logo.svg';
 
 import { expoXml, githubXml } from './utils';
 
 const { width } = Dimensions.get('window');
-const iconSize = width * 0.35;
+const iconSize = width * 0.25;
 
 const Container = styled.SafeAreaView<ThemeProps>`
   flex: 1;
@@ -38,9 +40,8 @@ const Divider = styled.View`
   width: 70%;
   padding: 20px;
 `;
-const HeaderText = styled(TextInfo)`
-  color: ${({ theme }) => theme.colors.font.secondary};
-`;
+
+const sizesSet: SizeProps[] = ['xsmall', 'small', 'medium', 'large', 'xlarge'];
 
 export function Example ({
   setThemeMode,
@@ -52,30 +53,48 @@ export function Example ({
   return (
     <Container>
       {/* Example of Text */}
-      <TextInfo
-        color={theme.colors.font.main}
-        size="xlarge"
-        content={`You are using ${capitalize(theme.mode)} mode`}
-      />
+      <TextInfo content="Example of Text" />
+      <ComponentContainer>
+        {sizesSet.map((sizeItem: SizeProps) => (
+          <TextInfo
+            key={sizeItem}
+            color={theme.colors.font.main}
+            size={sizeItem}
+            content={`I'm a text in ${sizeItem} size`}
+          />
+        ))}
+      </ComponentContainer>
+
+      <Divider />
 
       {/* Example of Button */}
-      <Button
-        onPress={() => setThemeMode('dark')}
-        title="Active dark mode"
-        color={theme.colors.button.secondary}
-        size="xsmall"
-      />
-      <Button
-        onPress={() => setThemeMode('light')}
-        title="Active light mode"
-        color={theme.colors.button.secondary}
-        size="xsmall"
+      <TextInfo content="Example of Button" />
+      <ComponentContainer>
+        <Button
+          onPress={() => setThemeMode('dark')}
+          title="Active dark mode"
+          bgColor={theme.colors.button.main}
+          color={theme.colors.font.secondary}
+          size="xsmall"
+        />
+        <Button
+          onPress={() => setThemeMode('light')}
+          title="Active light mode"
+          bgColor={theme.colors.button.secondary}
+          color={theme.colors.font.main}
+          size="xsmall"
+        />
+      </ComponentContainer>
+      <TextInfo
+        size="xlarge"
+        color={theme.colors.font.secondary}
+        content={`You are using ${capitalize(theme.mode)} mode`}
       />
 
       <Divider />
 
       {/* Example of Telicon */}
-      <HeaderText content="Example of Telicon" />
+      <TextInfo content="Example of Telicon" />
       <ComponentContainer>
         <Telicon
           name="star"
@@ -95,12 +114,18 @@ export function Example ({
           fill={theme.colors.icon.main}
           fillSecondary="black"
         />
+        <Telicon
+          name="star"
+          size="xsmall"
+          fill={theme.colors.icon.main}
+          fillSecondary="black"
+        />
       </ComponentContainer>
 
       <Divider />
 
       {/* Example of SvgFromXml using app's configuration */}
-      <HeaderText content="Example of Svg using app's configuration" />
+      <TextInfo content="Example of Svg using app's configuration" />
       <ComponentContainer>
         <ReactIcon
           width={iconSize}
@@ -113,11 +138,13 @@ export function Example ({
       <Divider />
 
       {/* Example of SvgFromXml */}
-      <HeaderText content="Example of Svg From Xml" />
+      <TextInfo content="Example of Svg From Xml" />
       <ComponentContainer>
         <SvgFromXml
           xml={githubXml}
-          size="small"
+          // size="small"
+          width={theme.sizes.icon.small}
+          height={theme.sizes.icon.small}
           fill={theme.colors.icon.main}
           fillSecondary={theme.colors.icon.secondary}
         />
@@ -125,24 +152,26 @@ export function Example ({
           xml={ReactIcon}
           width={iconSize}
           height={iconSize}
-          size="small"
+          // size="small"
           fill={theme.colors.icon.main}
           fillSecondary={theme.colors.icon.secondary}
         />
         <SvgFromXmlString
           xml={expoXml}
-          width={theme.sizes.icon.small}
-          height={theme.sizes.icon.small}
-          size="small"
+          width={theme.sizes.icon.medium}
+          height={theme.sizes.icon.medium}
+          // size="small"
           fill={theme.colors.icon.main}
           fillSecondary={theme.colors.icon.secondary}
         />
         <SvgFromXmlFile
-          Xml={ReactIcon}
-          width={theme.sizes.icon.large}
-          height={theme.sizes.icon.large}
+          Xml={JsIcon}
+          // width={theme.sizes.icon.large}
+          // height={theme.sizes.icon.large}
+          // width={theme.sizes.icon.large}
+          // height={theme.sizes.icon.large}
           // size="large"
-          // size="small"
+          size="small"
           fill={theme.colors.icon.main}
           fillSecondary={theme.colors.icon.secondary}
         />
