@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@2600hz/commio-native-utilities/-/commio-native-utilities-0.5.2.tgz#c317d80ec5c9cfcaa12ee7eff8d38f42128e7e71"
   integrity sha512-eVZVIFuMggt2kHd6ty6IgW5u0pz9WPwtjLJdi2fbRZBqywzm+VWMA5nYDK8lYnjiJ9jTPd9ELjgDtR96fJeSaQ==
 
-"@2600hz/sds-react-native-components@^1.8.3":
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/@2600hz/sds-react-native-components/-/sds-react-native-components-1.8.3.tgz#c8f9c90e2a5224f6eaec4ba5fa142e8de257eda5"
-  integrity sha512-0g2+rdExnwMrap2vCExGQd5i5k+cepbW3Qju81Z7TkqOPuv0O5ddsCtsS193cPBnfxqjeTMajbv1g/MbpRzChw==
+"@2600hz/sds-react-native-components@^1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@2600hz/sds-react-native-components/-/sds-react-native-components-1.9.0.tgz#d31d383e5da6cffa704bcb64f7b181a8c328dbe5"
+  integrity sha512-j3FFaTxQx3V6MjqGjWEQzthGIwf34xk4lvaFK//oJEn7Gzhssx5Moz2hDLNqW4Hcztor5o5Pp3dfR5/xt9Gngw==
   dependencies:
     "@2600hz/commio-native-utilities" "^0.5.2"
     "@2600hz/sds-react-native-theme" "^0.2.3"

@@ -49,6 +49,9 @@ export function Example ({
   setThemeMode: (lastTheme: any) => void;
 }) {
   const theme = useTheme();
+  console.log(
+    'https://blog.logrocket.com/how-to-use-styled-components-with-react-native/'
+  );
 
   return (
     <Container>
@@ -118,6 +121,32 @@ export function Example ({
           name="star"
           size="xsmall"
           fill={theme.colors.icon.main}
+          fillSecondary="black"
+        />
+      </ComponentContainer>
+      <ComponentContainer>
+        <Telicon
+          name="arrow-from-bottom"
+          size="medium"
+          fill={theme.colors.icon.secondary}
+          fillSecondary="black"
+        />
+        <Telicon
+          name="arrow-from-left"
+          size="medium"
+          fill={theme.colors.icon.secondary}
+          fillSecondary="black"
+        />
+        <Telicon
+          name="arrow-from-right"
+          size="medium"
+          fill={theme.colors.icon.secondary}
+          fillSecondary="black"
+        />
+        <Telicon
+          name="arrow-from-top"
+          size="medium"
+          fill={theme.colors.icon.secondary}
           fillSecondary="black"
         />
       </ComponentContainer>
