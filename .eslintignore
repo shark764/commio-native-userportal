@@ -8,6 +8,7 @@ rollup.config.js
 webpack.config.js
 commitlint.config.js
 lint-staged.config.js
+transformer.js
 .eslintrc.js
 # .svgrrc.js
 

@@ -20,7 +20,9 @@
         "jsx",
         "json",
         "wasm",
-        "svg"
+        "svg",
+        "scss",
+        "sass"
       ]
     },
     "icon": "./assets/icon.png",

@@ -1,0 +1,61 @@
+@import '../node_modules/@2600hz/sds-core/sds-tools';
+// @import 'shadows';
+// @import 'color-palette';
+// @import './node_modules/@2600hz/sds-themes/sds_default-theme';
+
+//--------------
+// Converting em to px
+//--------------
+// $base-font-size-em: 1em;
+
+// @function em2px($target, $context: $base-font-size-em) {
+//   @if $target == 0 {
+//     @return 0;
+//   }
+//   @return ($target / 1em) * ($context / 1em) * 16 + 0px;
+// }
+
+.mainTitle {
+  margin-bottom: sds-spc(16);
+  @include sds-typeset(title-1, bold);
+}
+
+//--------------
+//Implemented to a CSS Token (Recomended way of using function)
+//--------------
+// --sds_theme-primary: sds-color(blue);
+
+//--------------
+//Implemented directly over a HTML tag
+//--------------
+.h1 {
+  color: sds-color(blue, 80);
+  @include sds-typeset(heading-1, semi);
+}
+
+.title {
+  @include sds-typeset(title-1);
+}
+
+.subtitle {
+  @include sds-typeset(title-2, bold);
+}
+
+.viewShadow {
+  // @include sds-shadow(3);
+}
+
+.h2 {
+  //Mobile view (Default value)
+  color: sds-color(gray, 120);
+
+  //Tablet view
+  @include sds-screen(xs) {
+    color: sds-color(green, 80);
+  }
+
+  //Tablet view
+  @include sds-screen(sm-mobile) {
+    color: sds-color(orange, 80);
+  }
+}

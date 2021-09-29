@@ -45,12 +45,14 @@ module.exports = (async () => {
           inlineRequires: true,
         },
       }),
-      babelTransformerPath: require.resolve('react-native-svg-transformer'),
+      // babelTransformerPath: require.resolve('react-native-svg-transformer'),
+      // babelTransformerPath: require.resolve('react-native-sass-transformer'),
+      babelTransformerPath: require.resolve('./transformer.js'),
     },
 
     resolver: {
-      assetExts: assetExts.filter((ext) => ext !== 'svg'),
-      sourceExts: [...sourceExts, 'svg'],
+      assetExts: assetExts.filter((ext) => ext !== 'svg' && ext !== 'scss'),
+      sourceExts: [...sourceExts, 'svg', 'scss', 'sass'],
 
       // We need to make sure that only one version is loaded for peerDependencies
       // So we blacklist them at the root, and alias them to the versions in example's node_modules
