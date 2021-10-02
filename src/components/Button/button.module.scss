@@ -1,0 +1,17 @@
+.button {
+  margin: sds-spc(12) sds-spc(16);
+  padding: sds-spc(12);
+  background-color: sds-color(green, 5);
+}
+.pressIn {
+  background-color: sds-color(teal, 70);
+}
+.pressOut {
+  background-color: sds-color(teal, 30);
+}
+.titlePressIn {
+  color: sds-color(gray, 30);
+}
+.titlePressOut {
+  color: sds-color(gray, 90);
+}

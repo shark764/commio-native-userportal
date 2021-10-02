@@ -31,6 +31,7 @@ module.exports = function (api) {
             '@modules': './src/modules',
             '@providers': './src/providers',
             '@shared': './src/shared',
+            '@stores': './src/stores',
             '@styles': './src/styles',
             '@utilities': './src/utilities',
             tests: ['./tests/'],

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { SafeAreaView, ScrollView, Text } from 'react-native';
+import React from 'react';
+import { Pressable, SafeAreaView, ScrollView, Text, View } from 'react-native';
 
 import { StatusBar } from 'expo-status-bar';
 import * as Updates from 'expo-updates';
@@ -7,18 +7,34 @@ import * as Updates from 'expo-updates';
 // Include this line only into the main file of the project (Probably, an index.js)
 // import SdsRest from '@2600hz/sds-core/sds-reset.scss';
 // import SdsTools from '@2600hz/sds-core/sds-tools.scss';
+// PROBABLY JUST CALL A FUNCTION FROM PROVIDER THAT RETURNS THE THEME
+// OR FROM ZUSTAND, SINCE ALL FILES WILL CONVERTED TO OBJECT
 
+import { Picker } from '@react-native-picker/picker';
+
+import { Button } from './components/Button';
 import Example from './modules/Example';
 import AppThemeProvider from './providers/appThemeProvider';
-import Sdsstyles from './sds.scss';
+import colors from './providers/theming/colors.module.scss';
+import { themeModes } from './providers/theming/utils';
+import { useThemeStore } from './stores/useThemeStore';
 
 export function App () {
-  const [themeMode, setThemeMode] = useState('light');
-  console.log('====================================');
-  console.log(Sdsstyles);
-  console.log('====================================');
+  // const [themeMode, setThemeMode] = React.useState<I_ThemeModes>('light');
+  // const [theme, setTheme] = React.useState<I_ThemeDefinitionScss>({});
 
-  useEffect(() => {
+  const mode = useThemeStore((state) => state.mode);
+  const toggleTheme = useThemeStore((state) => state.toggleTheme);
+  const theme = useThemeStore((state) => state.theme);
+
+  console.log({
+    'btn-example': colors['--sds-example-variable-color'],
+    themes: colors.themes,
+    theme,
+    mode,
+  });
+
+  React.useEffect(() => {
     async function updateApp () {
       const { isAvailable } = await Updates.checkForUpdateAsync();
       if (isAvailable) {
@@ -30,15 +46,65 @@ export function App () {
     void updateApp();
   }, []);
 
+  // React.useEffect(() => {
+  //   setTheme(getTheme(mode));
+  // }, [mode]);
+
   return (
-    <AppThemeProvider mode={themeMode}>
+    <AppThemeProvider mode={mode}>
       <SafeAreaView>
         <ScrollView>
-          <Text style={Sdsstyles.title}>this is an example of sass</Text>
-          <Text style={Sdsstyles.subtitle}>
-            this is another example of sass
-          </Text>
-          <Example setThemeMode={setThemeMode} />
+          <View style={[{ borderColor: theme.border }]}>
+            <Picker
+              selectedValue={mode}
+              onValueChange={(itemValue) => toggleTheme(itemValue)}
+              style={{
+                backgroundColor: theme.background,
+                borderColor: theme.border,
+                color: theme.color_primary,
+              }}>
+              {themeModes.map((tMode) => (
+                <Picker.Item
+                  style={{ color: theme.color_primary }}
+                  key={tMode}
+                  label={tMode}
+                  value={tMode}
+                />
+              ))}
+            </Picker>
+          </View>
+
+          <View
+            style={[
+              colors[`sds-${mode}-example`],
+              {
+                backgroundColor: theme.background,
+                borderColor: theme.border,
+              },
+            ]}>
+            <Text style={[{ color: theme.color_primary }]}>
+              Hey I amm in {mode} mode!
+            </Text>
+          </View>
+
+          <View style={colors['sds-my-own-example']}>
+            <Pressable onPress={() => toggleTheme('light')}>
+              <Text>Light</Text>
+            </Pressable>
+            <Pressable onPress={() => toggleTheme('dark')}>
+              <Text>Dark</Text>
+            </Pressable>
+          </View>
+
+          <View>
+            <Button
+              titlePressIn="You pressed me!"
+              titlePressOut="Press me!!"
+              onPress={() => console.log('Hey there!')}
+            />
+          </View>
+
+          <Example setThemeMode={toggleTheme} />
         </ScrollView>
         {/* eslint-disable-next-line react/style-prop-object */}
         <StatusBar style="auto" />

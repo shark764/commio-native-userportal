@@ -1,0 +1,42 @@
+// @import '../../../node_modules/@2600hz/sds-core/sds-tools';
+@import 'shadows';
+
+@import 'themes/mixins';
+
+$themes: ();
+
+@import 'themes/light';
+@include generateThemeJSExports(light, $light);
+
+@import 'themes/dark';
+@include generateThemeJSExports(dark, $dark);
+
+$sdsExampleVariable: rgb(137, 211, 62);
+
+%box-shared {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: sds-color(grey, 5);
+  color: sds-color(green, 5);
+  padding: 10px;
+  // margin: 10px;
+  border-radius: 10px;
+}
+
+@import 'exa1';
+
+.sds-light-example {
+  background-color: map-get($light, 'control_icon');
+  color: map-get($light, 'button_ghost_interactive_background');
+}
+
+.sds-dark-example {
+  background-color: map-get($dark, 'color_primary_interactive');
+  color: map-get($dark, 'control_background');
+}
+
+:export {
+  --sds-example-variable-color: #{$sdsExampleVariable};
+}

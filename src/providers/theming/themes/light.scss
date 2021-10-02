@@ -1,0 +1,92 @@
+@import 'light-definitions';
+@import 'functions';
+
+$light: map-merge(
+  $light_definitions,
+  (
+    // ------------------------------
+    // Base Colors
+    // ------------------------------
+    // ------------------------------
+    // Semantic Colors
+    // ------------------------------
+    color_primary_tint_1: light-get(color_blue_tint_1),
+    color_success: light-get(color_green),
+    color_success_interactive: light-get(color_green_interactive),
+    color_success_tint_1: light-get(color_green_tint_1),
+    color_success_tint_2: light-get(color_green_tint_2),
+    color_warning: light-get(color_yellow),
+    color_warning_interactive: light-get(color_yellow_interactive),
+    color_warning_tint_1: light-get(color_yellow_tint_1),
+    color_warning_tint_2: light-get(color_yellow_tint_2),
+    color_danger_tint_2: light-get(color_red_tint_2),
+    // ------------------------------
+    // Backgrounds
+    // ------------------------------
+    // ------------------------------
+    // Text
+    // ------------------------------
+    text_highlighted: light-get(text),
+    text_highlighted_background: light-get(color_primary_tint_2),
+    // ------------------------------
+    // Borders
+    // ------------------------------
+    // ------------------------------
+    // Icons
+    // ------------------------------
+    // ------------------------------
+    // Buttons
+    // ------------------------------
+    button_interactive_background: light-get(background_low),
+    button_interactive_border: light-get(color_neutral),
+    button_interactive_text: light-get(button_text),
+    button_primary_background: light-get(color_primary),
+    button_secondary_background: light-get(button_background),
+    button_secondary_border: light-get(button_border),
+    button_secondary_text: light-get(color_primary_interactive),
+    button_secondary_icon: light-get(color_primary),
+    button_secondary_interactive_background:
+      light-get(button_primary_interactive_background),
+    button_secondary_interactive_border:
+      light-get(button_primary_interactive_border),
+    button_secondary_interactive_text:
+      light-get(button_primary_interactive_text),
+    button_secondary_interactive_icon:
+      light-get(button_primary_interactive_icon),
+    button_ghost_icon: light-get(button_icon),
+    button_ghost_interactive_background: light-get(color_neutral_tint_2),
+    button_ghost_interactive_text: light-get(button_ghost_text),
+    button_ghost_interactive_icon: light-get(button_interactive_icon),
+    button_danger_background: light-get(color_danger),
+    button_danger_alt_background: light-get(button_background),
+    button_danger_alt_border: light-get(button_border),
+    button_danger_alt_text: light-get(color_danger_interactive),
+    button_danger_alt_icon: light-get(color_danger),
+    button_danger_alt_interactive_background:
+      light-get(button_danger_interactive_background),
+    button_danger_alt_interactive_border:
+      light-get(button_danger_interactive_border),
+    button_danger_alt_interactive_text:
+      light-get(button_danger_interactive_text),
+    button_danger_alt_interactive_icon:
+      light-get(button_danger_interactive_icon),
+    // ------------------------------
+    // Controls
+    // ------------------------------
+    control_focus_background: light-get(control_hover_background),
+    control_focus_border: light-get(control_hover_border),
+    control_disabled_border: light-get(control_border),
+    control_disabled_text: light-get(control_text),
+    control_disabled_icon: light-get(control_icon),
+    control_disabled_placeholder: light-get(control_placeholder),
+    control_error_background: light-get(color_danger_tint_1),
+    control_error_border: light-get(color_danger),
+    control_error_text: light-get(color_danger_interactive),
+    control_error_icon: light-get(color_danger),
+    // ------------------------------
+    // Global UI
+    // ------------------------------
+    focus_shadow: #{0 0 2px light-get(background),
+    0 0 4px light-get(focus_highlight)}
+  )
+);

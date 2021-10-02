@@ -1,0 +1,92 @@
+@import 'dark-definitions';
+@import 'functions';
+
+$dark: map-merge(
+  $dark_definitions,
+  (
+    // ------------------------------
+    // Base Colors
+    // ------------------------------
+    // ------------------------------
+    // Semantic Colors
+    // ------------------------------
+    color_primary_tint_1: dark-get(color_blue_tint_1),
+    color_success: dark-get(color_green),
+    color_success_interactive: dark-get(color_green_interactive),
+    color_success_tint_1: dark-get(color_green_tint_1),
+    color_success_tint_2: dark-get(color_green_tint_2),
+    color_warning: dark-get(color_yellow),
+    color_warning_interactive: dark-get(color_yellow_interactive),
+    color_warning_tint_1: dark-get(color_yellow_tint_1),
+    color_warning_tint_2: dark-get(color_yellow_tint_2),
+    color_danger_tint_2: dark-get(color_red_tint_2),
+    // ------------------------------
+    // Backgrounds
+    // ------------------------------
+    // ------------------------------
+    // Text
+    // ------------------------------
+    text_contrast_muted: dark-get(color_neutral_tint_2),
+    text_highlighted: dark-get(text),
+    text_highlighted_background: dark-get(color_primary_tint_2),
+    // ------------------------------
+    // Borders
+    // ------------------------------
+    // ------------------------------
+    // Icons
+    // ------------------------------
+    // ------------------------------
+    // Buttons
+    // ------------------------------
+    button_interactive_background: dark-get(background_low),
+    button_interactive_text: dark-get(button_text),
+    button_primary_background: dark-get(color_primary),
+    button_primary_border: dark-get(color_primary),
+    button_secondary_background: dark-get(button_background),
+    button_secondary_border: dark-get(button_border),
+    button_secondary_text: dark-get(color_primary_interactive),
+    button_secondary_icon: dark-get(color_primary),
+    button_secondary_interactive_background:
+      dark-get(button_primary_interactive_background),
+    button_secondary_interactive_border:
+      dark-get(button_primary_interactive_border),
+    button_secondary_interactive_text: dark-get(button_primary_interactive_text),
+    button_secondary_interactive_icon: dark-get(button_primary_interactive_icon),
+    button_ghost_icon: dark-get(button_icon),
+    button_ghost_interactive_background: dark-get(color_neutral_tint_2),
+    button_ghost_interactive_text: dark-get(button_ghost_text),
+    button_ghost_interactive_icon: dark-get(button_interactive_icon),
+    button_danger_background: dark-get(color_danger),
+    button_danger_border: dark-get(color_danger_interactive),
+    button_danger_alt_background: dark-get(button_background),
+    button_danger_alt_border: dark-get(button_border),
+    button_danger_alt_text: dark-get(color_danger_interactive),
+    button_danger_alt_icon: dark-get(color_danger),
+    button_danger_alt_interactive_background:
+      dark-get(button_danger_interactive_background),
+    button_danger_alt_interactive_border:
+      dark-get(button_danger_interactive_border),
+    button_danger_alt_interactive_text: dark-get(button_danger_interactive_text),
+    button_danger_alt_interactive_icon: dark-get(button_danger_interactive_icon),
+    // ------------------------------
+    // Controls
+    // ------------------------------
+    control_hover_background: dark-get(control_background),
+    control_focus_background: dark-get(background_low),
+    control_focus_border: dark-get(control_hover_border),
+    control_disabled_background: dark-get(control_background),
+    control_disabled_border: dark-get(control_border),
+    control_disabled_text: dark-get(control_text),
+    control_disabled_icon: dark-get(control_icon),
+    control_disabled_placeholder: dark-get(control_placeholder),
+    control_error_background: dark-get(color_danger_tint_1),
+    control_error_border: dark-get(color_danger),
+    control_error_text: dark-get(color_danger_interactive),
+    control_error_icon: dark-get(color_danger),
+    // ------------------------------
+    // Global UI
+    // ------------------------------
+    focus_shadow: #{0 0 2px dark-get(background),
+    0 0 4px dark-get(focus_highlight)}
+  )
+);

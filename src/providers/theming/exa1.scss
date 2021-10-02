@@ -1,0 +1,9 @@
+.sds-my-own-example {
+  background-color: map-get($light, 'color_orange_tint_1');
+  color: map-get($dark, 'color_yellow_interactive');
+  box-shadow: 0 16px 48px map-get($light, 'color_indigo_interactive');
+  @include sds-typeset(heading-1, semi);
+  @extend %box-shared;
+  @include sds-shadow(3);
+  margin: sds-spc(32) sds-spc(40);
+}

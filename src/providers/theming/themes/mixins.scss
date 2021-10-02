@@ -1,0 +1,22 @@
+// mixins.scss
+
+// Generate a variable for every key in theme passed
+// as parameter, then we export them so we can access to
+// them from React.
+@mixin generateThemeJSExports($themeName, $newThemeMap) {
+  //creates/adds to list of theme names
+  // Example: dark,light,future,solaris
+  $themes: append($themes, $themeName, $separator: comma) !global;
+
+  //exports theme variables
+  :export {
+    themes: $themes;
+
+    @each $key, $value in $newThemeMap {
+      // Assuming all keys have prefix "--"
+      // Example: "color_primary_interactive"
+      // produces sds_theme_dark_color_primary_interactive
+      sds_theme_#{$themeName}_#{$key}: $value;
+    }
+  }
+}
