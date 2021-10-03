@@ -4,17 +4,7 @@ import { Pressable, Text } from 'react-native';
 import { useThemeStore } from '@/stores/useThemeStore';
 
 import styles from './button.module.scss';
-
-export interface ButtonProps {
-  titlePressIn?: string;
-  titlePressOut?: string;
-  onPress?: () => void;
-  onPressIn?: () => void;
-  onPressOut?: () => void;
-  styles?: {
-    [key: string]: string | number;
-  };
-}
+import type { ButtonProps } from './types';
 
 export function Button ({
   onPress,

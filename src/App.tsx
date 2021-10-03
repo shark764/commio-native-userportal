@@ -88,19 +88,20 @@ export function App () {
           </View>
 
           <View style={colors['sds-my-own-example']}>
-            <Pressable onPress={() => toggleTheme('light')}>
-              <Text>Light</Text>
-            </Pressable>
-            <Pressable onPress={() => toggleTheme('dark')}>
-              <Text>Dark</Text>
-            </Pressable>
-          </View>
-
-          <View>
             <Button
-              titlePressIn="You pressed me!"
-              titlePressOut="Press me!!"
-              onPress={() => console.log('Hey there!')}
+              titlePressIn="Turning to Light"
+              titlePressOut="You switched to Light"
+              onPress={() => toggleTheme('light')}
+            />
+            <Button
+              titlePressIn="Turning to Dark"
+              titlePressOut="You switched to Dark"
+              onPress={() => toggleTheme('dark')}
+            />
+            <Button
+              titlePressIn="Toggling theme"
+              titlePressOut="Switch theme"
+              onPress={toggleTheme}
             />
           </View>
 
