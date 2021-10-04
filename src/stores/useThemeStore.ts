@@ -1,5 +1,5 @@
 import create from 'zustand';
-import { persist } from 'zustand/middleware';
+// import { persist } from 'zustand/middleware';
 
 import type {
   I_ThemeModes,
@@ -13,7 +13,8 @@ interface ThemeState {
   theme: I_ThemeDefinitionScss;
   mode: I_ThemeModes;
   setTheme: (theme: I_ThemeDefinitionScss) => void;
-  toggleTheme: (mode?: I_ThemeModes) => void;
+  setMode: (mode: I_ThemeModes) => void;
+  toggleTheme: () => void;
 }
 
 // eslint-disable-next-line @typescript-eslint/naming-convention
@@ -28,13 +29,15 @@ export const useThemeStore = create<ThemeState>((set) => ({
 
   // methods for manipulating state
   setTheme: (theme) => set(() => ({ theme })),
-  toggleTheme: (mode) =>
-    set((state) => ({
-      mode: mode ?? (state.mode === THEME_LIGHT ? THEME_DARK : THEME_LIGHT),
-      theme: getTheme(
-        mode ?? (state.mode === THEME_LIGHT ? THEME_DARK : THEME_LIGHT)
-      ),
-    })),
+  setMode: (mode) => set(() => ({ mode, theme: getTheme(mode) })),
+  toggleTheme: () =>
+    set((state) => {
+      const mode = state.mode === THEME_LIGHT ? THEME_DARK : THEME_LIGHT;
+      return {
+        mode,
+        theme: getTheme(mode),
+      };
+    }),
 }));
 
 export default useThemeStore;

@@ -10,6 +10,7 @@ export function Button ({
   onPress,
   onPressIn,
   onPressOut,
+  title,
   titlePressIn,
   titlePressOut,
   styles: propsStyles,
@@ -47,7 +48,7 @@ export function Button ({
             // Testing using theme
             { color: pressed ? theme.button_primary_text : theme.button_text },
           ]}>
-          {pressed ? titlePressIn : titlePressOut}
+          {title ?? (pressed ? titlePressIn : titlePressOut)}
         </Text>
       )}
     </Pressable>
