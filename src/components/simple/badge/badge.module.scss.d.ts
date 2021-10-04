@@ -3,9 +3,9 @@ interface StyleGenericValue {
 }
 
 export interface I_BadgeScss {
-  button: StyleGenericValue;
+  badge: StyleGenericValue;
 }
 
-export const styles: I_BadgeScss;
+export const BadgeStyles: I_BadgeScss;
 
-export default styles;
+export default BadgeStyles;

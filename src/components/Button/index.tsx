@@ -3,7 +3,7 @@ import { Pressable, Text } from 'react-native';
 
 import { useThemeStore } from '@/stores/useThemeStore';
 
-import styles from './button.module.scss';
+import ButtonStyles from './button.module.scss';
 import type { ButtonProps } from './types';
 
 export function Button ({
@@ -23,8 +23,8 @@ export function Button ({
       onPressIn={onPressIn}
       onPressOut={onPressOut}
       style={({ pressed }) => [
-        styles.button,
-        pressed ? styles.pressIn : styles.pressOut,
+        ButtonStyles.button,
+        pressed ? ButtonStyles.pressIn : ButtonStyles.pressOut,
         propsStyles ?? {},
 
         // Testing using theme
@@ -42,7 +42,7 @@ export function Button ({
       {({ pressed }) => (
         <Text
           style={[
-            pressed ? styles.titlePressIn : styles.titlePressOut,
+            pressed ? ButtonStyles.titlePressIn : ButtonStyles.titlePressOut,
 
             // Testing using theme
             { color: pressed ? theme.button_primary_text : theme.button_text },

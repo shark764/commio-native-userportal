@@ -3,9 +3,9 @@ interface StyleGenericValue {
 }
 
 export interface I_ToastTriggerScss {
-  button: StyleGenericValue;
+  toasttrigger: StyleGenericValue;
 }
 
-export const styles: I_ToastTriggerScss;
+export const ToastTriggerStyles: I_ToastTriggerScss;
 
-export default styles;
+export default ToastTriggerStyles;

@@ -3,9 +3,9 @@ interface StyleGenericValue {
 }
 
 export interface I_TextareaScss {
-  button: StyleGenericValue;
+  textarea: StyleGenericValue;
 }
 
-export const styles: I_TextareaScss;
+export const TextareaStyles: I_TextareaScss;
 
-export default styles;
+export default TextareaStyles;

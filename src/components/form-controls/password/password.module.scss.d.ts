@@ -3,9 +3,9 @@ interface StyleGenericValue {
 }
 
 export interface I_PasswordScss {
-  button: StyleGenericValue;
+  password: StyleGenericValue;
 }
 
-export const styles: I_PasswordScss;
+export const PasswordStyles: I_PasswordScss;
 
-export default styles;
+export default PasswordStyles;

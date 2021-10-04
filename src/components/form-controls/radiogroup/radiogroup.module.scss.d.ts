@@ -3,9 +3,9 @@ interface StyleGenericValue {
 }
 
 export interface I_RadioGroupScss {
-  button: StyleGenericValue;
+  radiogroup: StyleGenericValue;
 }
 
-export const styles: I_RadioGroupScss;
+export const RadioGroupStyles: I_RadioGroupScss;
 
-export default styles;
+export default RadioGroupStyles;

@@ -3,9 +3,9 @@ interface StyleGenericValue {
 }
 
 export interface I_LinkScss {
-  button: StyleGenericValue;
+  link: StyleGenericValue;
 }
 
-export const styles: I_LinkScss;
+export const LinkStyles: I_LinkScss;
 
-export default styles;
+export default LinkStyles;

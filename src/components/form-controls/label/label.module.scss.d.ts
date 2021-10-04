@@ -3,9 +3,9 @@ interface StyleGenericValue {
 }
 
 export interface I_LabelScss {
-  button: StyleGenericValue;
+  label: StyleGenericValue;
 }
 
-export const styles: I_LabelScss;
+export const LabelStyles: I_LabelScss;
 
-export default styles;
+export default LabelStyles;

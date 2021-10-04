@@ -3,9 +3,9 @@ interface StyleGenericValue {
 }
 
 export interface I_TeliconScss {
-  button: StyleGenericValue;
+  telicon: StyleGenericValue;
 }
 
-export const styles: I_TeliconScss;
+export const TeliconStyles: I_TeliconScss;
 
-export default styles;
+export default TeliconStyles;

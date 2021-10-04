@@ -3,9 +3,9 @@ interface StyleGenericValue {
 }
 
 export interface I_AvatarScss {
-  button: StyleGenericValue;
+  avatar: StyleGenericValue;
 }
 
-export const styles: I_AvatarScss;
+export const AvatarStyles: I_AvatarScss;
 
-export default styles;
+export default AvatarStyles;

@@ -2,10 +2,10 @@ interface StyleGenericValue {
   [key: string]: string | number;
 }
 
-export interface I_TextinputScss {
-  button: StyleGenericValue;
+export interface I_TextInputScss {
+  textinput: StyleGenericValue;
 }
 
-export const styles: I_TextinputScss;
+export const TextInputStyles: I_TextInputScss;
 
-export default styles;
+export default TextInputStyles;

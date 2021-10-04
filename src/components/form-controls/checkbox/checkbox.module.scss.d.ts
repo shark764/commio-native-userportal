@@ -3,9 +3,9 @@ interface StyleGenericValue {
 }
 
 export interface I_CheckboxScss {
-  button: StyleGenericValue;
+  checkbox: StyleGenericValue;
 }
 
-export const styles: I_CheckboxScss;
+export const CheckboxStyles: I_CheckboxScss;
 
-export default styles;
+export default CheckboxStyles;

@@ -1,1 +1,12 @@
-export interface CheckboxGroupProps {}
+export interface CheckboxGroupProps {
+  content?: string;
+  title?: string;
+  color?: string;
+  bgColor?: string;
+  type?: TypeProps;
+  size?: SizeProps;
+  disabled: boolean;
+  styles?: {
+    [key: string]: string | number;
+  };
+}

@@ -1,1 +1,12 @@
-export interface ButtonProps {}
+export interface ButtonProps {
+  content?: string;
+  title?: string;
+  color?: string;
+  bgColor?: string;
+  type?: TypeProps;
+  size?: SizeProps;
+  disabled: boolean;
+  styles?: {
+    [key: string]: string | number;
+  };
+}

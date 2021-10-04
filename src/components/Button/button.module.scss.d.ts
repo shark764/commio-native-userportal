@@ -10,6 +10,6 @@ export interface I_ButtonScss {
   titlePressOut: StyleGenericValue;
 }
 
-export const styles: I_ButtonScss;
+export const ButtonStyles: I_ButtonScss;
 
-export default styles;
+export default ButtonStyles;

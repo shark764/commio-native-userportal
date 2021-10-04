@@ -3,9 +3,9 @@ interface StyleGenericValue {
 }
 
 export interface I_SearchScss {
-  button: StyleGenericValue;
+  search: StyleGenericValue;
 }
 
-export const styles: I_SearchScss;
+export const SearchStyles: I_SearchScss;
 
-export default styles;
+export default SearchStyles;
