@@ -1,11 +1,13 @@
-import create from 'zustand';
-// import { persist } from 'zustand/middleware';
+import create, { SetState, GetState } from 'zustand';
+import { devtools, persist } from 'zustand/middleware';
 
 import type {
   I_ThemeModes,
   I_ThemeDefinitionScss,
 } from '@/providers/theming/colors.module.scss';
 import { getTheme } from '@/providers/theming/utils';
+
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { THEME_TYPES } from '../constants';
 
@@ -22,14 +24,14 @@ const { THEME_LIGHT, THEME_DARK } = THEME_TYPES;
 const initialMode = THEME_LIGHT;
 const initialTheme = getTheme(initialMode);
 
-export const useThemeStore = create<ThemeState>((set) => ({
+const store = (set: SetState<ThemeState>, get: GetState<ThemeState>) => ({
   // initial state
   theme: initialTheme ?? {},
   mode: initialMode,
 
   // methods for manipulating state
-  setTheme: (theme) => set(() => ({ theme })),
-  setMode: (mode) => set(() => ({ mode, theme: getTheme(mode) })),
+  setTheme: (theme: I_ThemeDefinitionScss) => set(() => ({ theme })),
+  setMode: (mode: I_ThemeModes) => set(() => ({ mode, theme: getTheme(mode) })),
   toggleTheme: () =>
     set((state) => {
       const mode = state.mode === THEME_LIGHT ? THEME_DARK : THEME_LIGHT;
@@ -38,6 +40,16 @@ export const useThemeStore = create<ThemeState>((set) => ({
         theme: getTheme(mode),
       };
     }),
-}));
+});
+
+export const useThemeStore = create<ThemeState>(
+  devtools(
+    persist(store, {
+      name: 'theme-storage', // unique name
+      getStorage: () => AsyncStorage, // Add this here!
+    }),
+    { name: 'ThemeStore' }
+  )
+);
 
 export default useThemeStore;
