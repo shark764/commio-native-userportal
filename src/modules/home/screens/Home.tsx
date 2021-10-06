@@ -9,25 +9,16 @@ import { StatusBar } from 'expo-status-bar';
 // PROBABLY JUST CALL A FUNCTION FROM PROVIDER THAT RETURNS THE THEME
 // OR FROM ZUSTAND, SINCE ALL FILES WILL CONVERTED TO OBJECT
 
+import type { HomeScreenProp } from '@/App';
 import { Button } from '@/components/Button';
 import Example from '@/modules/tests/Example';
 import { themeModes } from '@/providers/theming/utils';
 import { useThemeStore } from '@/stores/useThemeStore';
 
 import { Picker } from '@react-native-picker/picker';
-import { useDrawerStatus, DrawerScreenProps } from '@react-navigation/drawer';
+import { useDrawerStatus } from '@react-navigation/drawer';
 
 import colors from '../../../providers/theming/colors.module.scss';
-
-// ...
-// eslint-disable-next-line @typescript-eslint/consistent-type-definitions
-type RootDrawerParamList = {
-  Home: undefined;
-  Auth: undefined;
-  Notifications: undefined;
-};
-
-type HomeScreenProp = DrawerScreenProps<RootDrawerParamList, 'Home'>;
 
 export function HomeScreen ({ navigation }: HomeScreenProp) {
   const mode = useThemeStore((state) => state.mode);

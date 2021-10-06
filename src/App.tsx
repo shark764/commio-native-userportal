@@ -1,5 +1,4 @@
-import React from 'react';
-import { Text } from 'react-native';
+import * as React from 'react';
 
 import * as Updates from 'expo-updates';
 
@@ -21,8 +20,10 @@ import { ConferencesScreen } from './modules/conferences/screens/Conferences';
 import { DevicesAndNumbersScreen } from './modules/devicesAndNumbers/screens/DevicesAndNumbers';
 import { FaxesScreen } from './modules/faxes/screens/Faxes';
 import { HomeScreen } from './modules/home/screens/Home';
+import { QueryExampleScreen } from './modules/tests/Query';
 import { VoiceMailsScreen } from './modules/voicemails/screens/VoiceMails';
 import AppThemeProvider from './providers/appThemeProvider';
+import { QueryProvider } from './providers/query/queryProvider';
 import { useThemeStore } from './stores/useThemeStore';
 
 // ...
@@ -34,6 +35,7 @@ type RootDrawerParamList = {
   DevicesAndNumbers: undefined;
   Faxes: undefined;
   Conferences: undefined;
+  QueryExample: undefined;
 };
 
 export type HomeScreenProp = DrawerScreenProps<RootDrawerParamList, 'Home'>;
@@ -73,64 +75,81 @@ export default function App () {
   }, []);
 
   return (
-    <AppThemeProvider mode={mode}>
-      <NavigationContainer>
-        <RootDrawer.Navigator
-          initialRouteName="Home"
-          // screenOptions={({ navigation, route }) => ({
-          //   headerLeft: (props) => (
-          //     <Text onPress={() => navigation.openDrawer()}>
-          //       <Telicon name="arrow-target-right" size="small" />
-          //     </Text>
-          //   ),
-          // })}
-        >
-          <RootDrawer.Screen
-            name="Home"
-            component={HomeScreen}
-            options={{
-              drawerIcon: (props) => <Telicon name="home" size="small" />,
-            }}
-          />
-          <RootDrawer.Screen
-            name="VoiceMails"
-            component={VoiceMailsScreen}
-            options={{
-              drawerIcon: (props) => <Telicon name="voicemail" size="small" />,
-            }}
-          />
-          <RootDrawer.Screen
-            name="CallHistory"
-            component={CallHistoryScreen}
-            options={{
-              drawerIcon: (props) => <Telicon name="list" size="small" />,
-            }}
-          />
-          <RootDrawer.Screen
-            name="DevicesAndNumbers"
-            component={DevicesAndNumbersScreen}
-            options={{
-              drawerIcon: (props) => (
-                <Telicon name="device-voip-phone" size="small" />
-              ),
-            }}
-          />
-          <RootDrawer.Screen
-            name="Faxes"
-            component={FaxesScreen}
-            options={{
-              drawerIcon: (props) => <Telicon name="device-fax" size="small" />,
-            }}
-          />
-          <RootDrawer.Screen
-            name="Conferences"
-            component={ConferencesScreen}
-            options={{
-              drawerIcon: (props) => <Telicon name="user-group" size="small" />,
-            }}
-          />
-        </RootDrawer.Navigator>
-      </NavigationContainer>
-    </AppThemeProvider>
+    <QueryProvider>
+      <AppThemeProvider mode={mode}>
+        <NavigationContainer>
+          <RootDrawer.Navigator
+            initialRouteName="Home"
+            // screenOptions={({ navigation, route }) => ({
+            //   headerLeft: (props) => (
+            //     <Text onPress={() => navigation.openDrawer()}>
+            //       <Telicon name="arrow-target-right" size="small" />
+            //     </Text>
+            //   ),
+            // })}
+          >
+            <RootDrawer.Screen
+              name="Home"
+              component={HomeScreen}
+              options={{
+                drawerIcon: (props) => <Telicon name="home" size="small" />,
+              }}
+            />
+            <RootDrawer.Screen
+              name="VoiceMails"
+              component={VoiceMailsScreen}
+              options={{
+                drawerIcon: (props) => (
+                  <Telicon name="voicemail" size="small" />
+                ),
+              }}
+            />
+            <RootDrawer.Screen
+              name="CallHistory"
+              component={CallHistoryScreen}
+              options={{
+                drawerIcon: (props) => <Telicon name="list" size="small" />,
+              }}
+            />
+            <RootDrawer.Screen
+              name="DevicesAndNumbers"
+              component={DevicesAndNumbersScreen}
+              options={{
+                drawerIcon: (props) => (
+                  <Telicon name="device-voip-phone" size="small" />
+                ),
+              }}
+            />
+            <RootDrawer.Screen
+              name="Faxes"
+              component={FaxesScreen}
+              options={{
+                drawerIcon: (props) => (
+                  <Telicon name="device-fax" size="small" />
+                ),
+              }}
+            />
+            <RootDrawer.Screen
+              name="Conferences"
+              component={ConferencesScreen}
+              options={{
+                drawerIcon: (props) => (
+                  <Telicon name="user-group" size="small" />
+                ),
+              }}
+            />
+            <RootDrawer.Screen
+              name="QueryExample"
+              component={QueryExampleScreen}
+              options={{
+                drawerIcon: (props) => (
+                  <Telicon name="db-storage" size="small" />
+                ),
+              }}
+            />
+          </RootDrawer.Navigator>
+        </NavigationContainer>
+      </AppThemeProvider>
+    </QueryProvider>
   );
 }

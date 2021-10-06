@@ -1,14 +1,20 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
 
-export interface VoiceMailsProps {
-  default: string;
-}
+import type { VoiceMailsScreenProp } from '@/App';
+import { Button } from '@/components/Button';
 
-export function VoiceMailsScreen (props: VoiceMailsProps) {
+export function VoiceMailsScreen ({ navigation }: VoiceMailsScreenProp) {
   return (
-    <View>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>VoiceMails</Text>
+
+      <Button
+        onPress={() => navigation.goBack()}
+        titlePressIn="Going back home"
+        titlePressOut="Go back home"
+        title="Go back home"
+      />
     </View>
   );
 }
