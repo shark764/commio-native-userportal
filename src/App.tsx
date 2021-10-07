@@ -1,14 +1,10 @@
 import * as React from 'react';
 
 import * as Updates from 'expo-updates';
-
-// Include this line only into the main file of the project (Probably, an index.js)
-// import SdsRest from '@2600hz/sds-core/sds-reset.scss';
-// import SdsTools from '@2600hz/sds-core/sds-tools.scss';
-// PROBABLY JUST CALL A FUNCTION FROM PROVIDER THAT RETURNS THE THEME
-// OR FROM ZUSTAND, SINCE ALL FILES WILL CONVERTED TO OBJECT
+import RNAsyncStorageFlipper from 'rn-async-storage-flipper';
 
 import { Telicon } from '@2600hz/sds-react-native-components';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import {
   createDrawerNavigator,
   DrawerScreenProps,
@@ -26,7 +22,12 @@ import AppThemeProvider from './providers/appThemeProvider';
 import { QueryProvider } from './providers/query/queryProvider';
 import { useThemeStore } from './stores/useThemeStore';
 
-// ...
+// Include this line only into the main file of the project (Probably, an index.js)
+// import SdsRest from '@2600hz/sds-core/sds-reset.scss';
+// import SdsTools from '@2600hz/sds-core/sds-tools.scss';
+// PROBABLY JUST CALL A FUNCTION FROM PROVIDER THAT RETURNS THE THEME
+// OR FROM ZUSTAND, SINCE ALL FILES WILL CONVERTED TO OBJECT
+
 // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
 type RootDrawerParamList = {
   Home: undefined;
@@ -73,6 +74,11 @@ export default function App () {
     // eslint-disable-next-line no-void
     void updateApp();
   }, []);
+
+  React.useEffect(() => {
+    // For Flipper asyncstorage monitoring
+    RNAsyncStorageFlipper(AsyncStorage);
+  }, [mode]);
 
   return (
     <QueryProvider>
