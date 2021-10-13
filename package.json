@@ -9,6 +9,7 @@
   },
   "scripts": {
     "android": "react-native run-android",
+    "android-dev": "adb reverse tcp:8081 tcp:8081 && yarn run android",
     "start:android": "yarn android && yarn start",
     "expo:android": "expo start --android",
     "ios": "react-native run-ios",

@@ -49,9 +49,9 @@ export function Example ({
   setThemeMode: (lastTheme: any) => void;
 }) {
   const theme = useTheme();
-  console.log(
-    'https://blog.logrocket.com/how-to-use-styled-components-with-react-native/'
-  );
+  // console.log(
+  //   'https://blog.logrocket.com/how-to-use-styled-components-with-react-native/'
+  // );
 
   return (
     <Container>
