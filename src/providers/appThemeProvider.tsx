@@ -14,7 +14,7 @@ const themeMap: { [key: string]: DefaultTheme; } = {
   dark: darkTheme,
 };
 
-function AppThemeProvider ({
+export function AppThemeProvider ({
   mode = 'dark',
   children,
 }: Props): React.ReactElement {

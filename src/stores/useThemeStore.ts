@@ -45,8 +45,8 @@ const store = (set: SetState<ThemeState>, get: GetState<ThemeState>) => ({
 export const useThemeStore = create<ThemeState>(
   devtools(
     persist(store, {
-      name: 'theme-storage', // unique name
-      getStorage: () => AsyncStorage, // Add this here!
+      name: 'theme-storage', // Unique identifier name on async-storage
+      getStorage: () => AsyncStorage, // Using Async-Storage for persistence
     }),
     { name: 'ThemeStore' }
   )
