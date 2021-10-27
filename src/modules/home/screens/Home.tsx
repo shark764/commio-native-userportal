@@ -6,25 +6,19 @@ import { StatusBar } from 'expo-status-bar';
 // Include this line only into the main file of the project (Probably, an index.js)
 // import SdsRest from '@2600hz/sds-core/sds-reset.scss';
 // import SdsTools from '@2600hz/sds-core/sds-tools.scss';
-// PROBABLY JUST CALL A FUNCTION FROM PROVIDER THAT RETURNS THE THEME
-// OR FROM ZUSTAND, SINCE ALL FILES WILL CONVERTED TO OBJECT
 
-import type { HomeScreenProp } from '@/App';
 import { Button } from '@/components/Button';
-import Example from '@/modules/tests/Example';
+import { useTheme } from '@/hooks/useTheme';
+import { Example } from '@/modules/tests/Example';
 import { themeModes } from '@/providers/theming/utils';
-import { useThemeStore } from '@/stores/useThemeStore';
+import { HomeScreenProp, MainRoutes } from '@/types';
 
 import { Picker } from '@react-native-picker/picker';
-import { useDrawerStatus } from '@react-navigation/drawer';
 
 import colors from '../../../providers/theming/colors.module.scss';
 
 export function HomeScreen ({ navigation }: HomeScreenProp) {
-  const mode = useThemeStore((state) => state.mode);
-  const theme = useThemeStore((state) => state.theme);
-  const setMode = useThemeStore((state) => state.setMode);
-  const toggleTheme = useThemeStore((state) => state.toggleTheme);
+  const { mode, theme, setMode, toggleTheme } = useTheme();
 
   // const [isEnabled, setIsEnabled] = React.useState(false);
   // const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
@@ -122,8 +116,8 @@ export function HomeScreen ({ navigation }: HomeScreenProp) {
 
           <View>
             <Button
-              onPress={() => navigation.navigate('Home')}
-              title="Going home"
+              onPress={() => navigation.navigate(MainRoutes.Faxes)}
+              title="Going Faxes"
             />
           </View>
 

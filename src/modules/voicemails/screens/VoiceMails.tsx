@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
 
-import type { VoiceMailsScreenProp } from '@/App';
 import { Button } from '@/components/Button';
+import type { VoiceMailsScreenProp } from '@/types';
 
 export function VoiceMailsScreen ({ navigation }: VoiceMailsScreenProp) {
   return (

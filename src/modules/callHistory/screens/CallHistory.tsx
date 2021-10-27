@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
 
-import type { CallHistoryScreenProp } from '@/App';
 import { Button } from '@/components/Button';
+import type { CallHistoryScreenProp } from '@/types';
 
 export function CallHistoryScreen ({ navigation }: CallHistoryScreenProp) {
   return (

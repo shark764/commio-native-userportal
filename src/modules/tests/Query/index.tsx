@@ -6,7 +6,7 @@ import { View, Text } from 'react-native';
 import { useQuery } from 'react-query';
 
 export function QueryExampleScreen () {
-  const { isLoading, error, data, isFetching } = useQuery(
+  const { isLoading, error, data, isFetching } = useQuery<any, Error>(
     'repoData',
     async () =>
       fetch('https://api.github.com/repos/tannerlinsley/react-query').then(
@@ -22,7 +22,7 @@ export function QueryExampleScreen () {
     );
   }
 
-  if (error) {
+  if (error != null) {
     return (
       <View>
         <Text>An error has occurred: {error.message}</Text>

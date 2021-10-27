@@ -11,7 +11,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { THEME_TYPES } from '../constants';
 
-interface ThemeState {
+export interface ThemeState {
   theme: I_ThemeDefinitionScss;
   mode: I_ThemeModes;
   setTheme: (theme: I_ThemeDefinitionScss) => void;

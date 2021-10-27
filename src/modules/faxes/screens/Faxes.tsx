@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { View, Text } from 'react-native';
 
-import type { FaxesScreenProp } from '@/App';
 import { Button } from '@/components/Button';
+import type { FaxesScreenProp } from '@/types';
 
 export function FaxesScreen ({ navigation }: FaxesScreenProp) {
   return (

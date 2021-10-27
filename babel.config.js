@@ -28,6 +28,7 @@ module.exports = function (api) {
             '@config': './src/config',
             '@containers': './src/containers',
             '@helpers': './src/helpers',
+            '@hooks': './src/hooks',
             '@modules': './src/modules',
             '@providers': './src/providers',
             '@shared': './src/shared',
