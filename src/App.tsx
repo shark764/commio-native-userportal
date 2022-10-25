@@ -7,13 +7,13 @@ import FlipperAsyncStorage from 'rn-flipper-async-storage-advanced';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import { useTheme } from './hooks/useTheme';
 import { AppThemeProvider } from './providers/appThemeProvider';
 import { QueryProvider } from './providers/query/queryProvider';
 import { RootNavigation } from './RootNavigation';
+import { ThemeState, useThemeStore } from './stores/useThemeStore';
 
 export default function App () {
-  const { mode } = useTheme();
+  const mode = useThemeStore((state: ThemeState) => state.mode);
 
   React.useEffect(() => {
     async function updateApp () {
@@ -28,7 +28,7 @@ export default function App () {
   }, []);
 
   React.useEffect(() => {
-    // For Flipper asyncstorage monitoring
+    // For Flipper AsyncStorage monitoring
     RNAsyncStorageFlipper(AsyncStorage);
   }, [mode]);
 

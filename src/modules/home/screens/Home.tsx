@@ -8,9 +8,9 @@ import { StatusBar } from 'expo-status-bar';
 // import SdsTools from '@2600hz/sds-core/sds-tools.scss';
 
 import { Button } from '@/components/Button';
-import { useTheme } from '@/hooks/useTheme';
 import { Example } from '@/modules/tests/Example';
 import { themeModes } from '@/providers/theming/utils';
+import { ThemeState, useThemeStore } from '@/stores/useThemeStore';
 import { HomeScreenProp, MainRoutes } from '@/types';
 
 import { Picker } from '@react-native-picker/picker';
@@ -18,7 +18,10 @@ import { Picker } from '@react-native-picker/picker';
 import colors from '../../../providers/theming/colors.module.scss';
 
 export function HomeScreen ({ navigation }: HomeScreenProp) {
-  const { mode, theme, setMode, toggleTheme } = useTheme();
+  const mode = useThemeStore((state: ThemeState) => state.mode);
+  const theme = useThemeStore((state: ThemeState) => state.theme);
+  const setMode = useThemeStore((state: ThemeState) => state.setMode);
+  const toggleTheme = useThemeStore((state: ThemeState) => state.toggleTheme);
 
   // const [isEnabled, setIsEnabled] = React.useState(false);
   // const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
